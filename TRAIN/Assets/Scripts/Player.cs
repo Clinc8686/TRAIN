@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Assertions.Must;
 using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
@@ -11,9 +12,11 @@ public class Player : MonoBehaviour
     private Vector3 newPosition;
     public float speed = 10f;
     private Rigidbody2D rb;
+    private SpriteRenderer _spriteRenderer;
 
     private void Awake()
     {
+        _spriteRenderer = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -29,7 +32,8 @@ public class Player : MonoBehaviour
 
     private void InputAction_GameInputs_OnPlayerUsedLeftMouseButton(object sender, System.EventArgs e)
     {
-        CheckPositionIsOnBottom(Mouse.current.position.ReadValue());
+        Vector3 mousePosition = Mouse.current.position.ReadValue();
+        CheckPositionIsOnBottom(mousePosition);
     }
 
     private void CheckPositionIsOnBottom(Vector3 position)
@@ -37,6 +41,10 @@ public class Player : MonoBehaviour
         Vector3 clickPosition = Camera.main.ScreenToWorldPoint(position);
         
         RaycastHit2D hit = Physics2D.Raycast(clickPosition, Vector2.down, 10f);
+        if (hit.collider == null)
+        {
+            return;
+        }
         if (hit.collider.gameObject.TryGetComponent(out IInteractable interactable))
         {
             interactable.Interact();
@@ -50,6 +58,31 @@ public class Player : MonoBehaviour
     private void MovePlayerToPosition()
     {
         Vector3 direction = (newPosition - transform.position).normalized;
-        rb.velocity = new Vector2(direction.x * speed, direction.y * speed);
+
+        if (direction.x > 0.05f)
+        {
+            _spriteRenderer.sprite = null;
+        } else if (direction.x < -0.05f)
+        {
+            _spriteRenderer.sprite = null;
+        } else if (direction.y > 0.05f)
+        {
+            _spriteRenderer.sprite = null;
+        } else if (direction.y < -0.05f)
+        {
+            _spriteRenderer.sprite = null;
+        }
+
+        float minTargetPosition = .5f;
+        float slowDownRange = 3f;
+        float distance = Vector3.Distance(transform.position, newPosition);
+        if (distance >= slowDownRange)
+        {
+            transform.position += direction * speed * Time.deltaTime;
+        } 
+        else
+        {
+            transform.position += direction * (speed * (distance / slowDownRange)) * Time.deltaTime;
+        }
     }
 }

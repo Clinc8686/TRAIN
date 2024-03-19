@@ -70,3 +70,4 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /TRAIN/[Aa]ssets/[Ss]treamingAssets/aa.meta
 /TRAIN/[Aa]ssets/[Ss]treamingAssets/aa/*
+TRAIN/.idea

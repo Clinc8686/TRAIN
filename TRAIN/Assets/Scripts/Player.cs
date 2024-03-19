@@ -38,13 +38,11 @@ public class Player : MonoBehaviour
 
     private void CheckPositionIsOnBottom(Vector3 position)
     {
-        Vector3 clickPosition = Camera.main.ScreenToWorldPoint(position);
-        
-        RaycastHit2D hit = Physics2D.Raycast(clickPosition, Vector2.down, 10f);
-        if (hit.collider == null)
-        {
-            return;
-        }
+        Vector3 clickPosition = Camera.main.ScreenToWorldPoint(position);        
+        RaycastHit2D hit = Physics2D.Raycast(clickPosition, Vector2.down, 10f); 
+
+        if (hit.collider == null) return;
+
         if (hit.collider.gameObject.TryGetComponent(out IInteractable interactable))
         {
             interactable.Interact();

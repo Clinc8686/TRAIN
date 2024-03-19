@@ -10,7 +10,7 @@ public class Testing : MonoBehaviour
         if (!_isFirstFrame)
         {
             _isFirstFrame = true;
-            Dialog.Instance.ShowText("Luka und Mario sind die geilsten!");
+            DialogController.Instance.WriteText("Luka und Mario sind die geilsten!");
             //StartCoroutine(Test());
         }
     }
@@ -18,7 +18,7 @@ public class Testing : MonoBehaviour
     private IEnumerator Test()
     {
         yield return new WaitForSeconds(2);
-        
-        Dialog.Instance.ShowText("Yes");
+
+        DialogController.Instance.WriteText("Yes");
     }
 }

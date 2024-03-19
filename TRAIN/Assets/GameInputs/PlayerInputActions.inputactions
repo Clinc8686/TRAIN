@@ -1,0 +1,34 @@
+{
+    "name": "PlayerInputActions",
+    "maps": [
+        {
+            "name": "Player",
+            "id": "b4c86fb8-0363-450f-a2ee-8e54a2020a70",
+            "actions": [
+                {
+                    "name": "MouseMoveAndInteract",
+                    "type": "Button",
+                    "id": "ef42e1e1-64ea-4638-8e60-d18d3bb16dd3",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "eb222c42-99f8-4888-a8a2-b87ce97b50a6",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MouseMoveAndInteract",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

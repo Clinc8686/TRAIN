@@ -21,6 +21,7 @@ public class GameInputs : MonoBehaviour
     }
     private void Awake()
     {
+        DontDestroyOnLoad(this.gameObject);
         if(Instance != null)
         {
             Destroy(gameObject);

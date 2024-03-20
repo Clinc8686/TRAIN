@@ -65,9 +65,10 @@ public class Player : MonoBehaviour
         float slowDownRange = 3f;
         
         Vector3 direction = (newPosition - transform.position).normalized;
+        direction.z = 0f;
         float distance = Vector3.Distance(transform.position, newPosition);
         
-        if (distance > minTargetPosition)
+        /*if (distance > minTargetPosition)
         {
             Debug.Log("Vector not null");
             animator.SetFloat("X", direction.x);
@@ -79,7 +80,7 @@ public class Player : MonoBehaviour
         {
             Debug.Log("player idle");
             animator.SetBool("IsWalking", false);
-        }
+        }*/
         
         if (distance >= slowDownRange)
         {

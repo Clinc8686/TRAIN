@@ -17,7 +17,7 @@ public class DialogController : MonoBehaviour
     {
         if (Instance != null)
         {
-            Destroy((gameObject));
+            Destroy(gameObject);
             return;
         }
 
@@ -43,6 +43,7 @@ public class DialogController : MonoBehaviour
             dialogTextField.text += _dialog[i];
         }
 
+        yield return new WaitForSeconds(3);
         _isWritingText = false;
         dialogSystemContent.gameObject.SetActive(false);
     }

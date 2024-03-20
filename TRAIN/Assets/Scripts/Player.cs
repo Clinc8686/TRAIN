@@ -39,13 +39,17 @@ public class Player : MonoBehaviour
     private void CheckPositionIsOnBottom(Vector3 position)
     {
         Vector3 clickPosition = Camera.main.ScreenToWorldPoint(position);        
-        RaycastHit2D hit = Physics2D.Raycast(clickPosition, Vector2.down, 10f); 
+        RaycastHit2D hit = Physics2D.Raycast(clickPosition, Vector2.zero);
 
         if (hit.collider == null) return;
 
         if (hit.collider.gameObject.TryGetComponent(out IInteractable interactable))
         {
-            interactable.Interact();
+            interactable.Interact(this);
+        }
+        else if(hit.collider.TryGetComponent<Collectable>(out Collectable collectable))
+        {
+            newPosition = collectable.transform.position;
         }
         else 
         { 
@@ -56,19 +60,20 @@ public class Player : MonoBehaviour
     private void MovePlayerToPosition()
     {
         Vector3 direction = (newPosition - transform.position).normalized;
+        direction.z = 0f;
 
         if (direction.x > 0.05f)
         {
-            _spriteRenderer.sprite = null;
+            
         } else if (direction.x < -0.05f)
         {
-            _spriteRenderer.sprite = null;
+            
         } else if (direction.y > 0.05f)
         {
-            _spriteRenderer.sprite = null;
+            
         } else if (direction.y < -0.05f)
         {
-            _spriteRenderer.sprite = null;
+            
         }
 
         float minTargetPosition = .5f;

@@ -51,6 +51,8 @@ public class Player : MonoBehaviour
         }
         else if(hit.collider.TryGetComponent<Collectable>(out Collectable collectable))
         {
+            if (!collectable.IsPlayerInRange()) return;
+
             newPosition = collectable.transform.position;
         }
         else 

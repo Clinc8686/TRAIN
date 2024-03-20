@@ -13,9 +13,11 @@ public class Player : MonoBehaviour
     public float speed = 10f;
     private Rigidbody2D rb;
     private SpriteRenderer _spriteRenderer;
+    private Animator animator;
 
     private void Awake()
     {
+        animator = GetComponent<Animator>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
     }
@@ -25,7 +27,7 @@ public class Player : MonoBehaviour
         GameInputs.Instance.OnPlayerUsedLeftMouseButton += InputAction_GameInputs_OnPlayerUsedLeftMouseButton;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         MovePlayerToPosition();
     }
@@ -59,26 +61,26 @@ public class Player : MonoBehaviour
     
     private void MovePlayerToPosition()
     {
-        Vector3 direction = (newPosition - transform.position).normalized;
-        direction.z = 0f;
-
-        if (direction.x > 0.05f)
-        {
-            
-        } else if (direction.x < -0.05f)
-        {
-            
-        } else if (direction.y > 0.05f)
-        {
-            
-        } else if (direction.y < -0.05f)
-        {
-            
-        }
-
         float minTargetPosition = .5f;
         float slowDownRange = 3f;
+        
+        Vector3 direction = (newPosition - transform.position).normalized;
         float distance = Vector3.Distance(transform.position, newPosition);
+        
+        if (distance > minTargetPosition)
+        {
+            Debug.Log("Vector not null");
+            animator.SetFloat("X", direction.x);
+            animator.SetFloat("Y", direction.y);
+            
+            animator.SetBool("IsWalking", true);
+        }
+        else
+        {
+            Debug.Log("player idle");
+            animator.SetBool("IsWalking", false);
+        }
+        
         if (distance >= slowDownRange)
         {
             transform.position += direction * speed * Time.deltaTime;

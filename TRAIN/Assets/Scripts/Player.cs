@@ -9,6 +9,7 @@ using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
+    [SerializeField] private Transform playerTargetIndicator;
     [SerializeField] private LayerMask interactableLayerMask;
 
     private Vector3 newPosition;
@@ -24,6 +25,7 @@ public class Player : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
 
         newPosition = transform.position;
+        playerTargetIndicator.gameObject.SetActive(false);
     }
 
     private void Start()
@@ -75,6 +77,8 @@ public class Player : MonoBehaviour
         else 
         { 
             newPosition = clickPosition;
+            playerTargetIndicator.position = (Vector2)clickPosition;
+            playerTargetIndicator.gameObject.SetActive(true);
         }
     }
     
@@ -86,7 +90,7 @@ public class Player : MonoBehaviour
         Vector3 direction = (newPosition - transform.position).normalized;
         direction.z = 0f;
         float distance = Vector3.Distance(transform.position, newPosition);
-        
+
         /*if (distance > minTargetPosition)
         {
             Debug.Log("Vector not null");

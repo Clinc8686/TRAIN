@@ -110,8 +110,11 @@ public class Player : MonoBehaviour
         else 
         { 
             newPosition = clickPosition;
-            playerTargetIndicator.position = (Vector2)clickPosition;
-            playerTargetIndicator.gameObject.SetActive(true);
+            if (playerTargetIndicator != null)
+            {
+                playerTargetIndicator.position = (Vector2)clickPosition;
+                playerTargetIndicator.gameObject.SetActive(true);
+            }
         }
     }
     

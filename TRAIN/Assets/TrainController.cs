@@ -9,6 +9,7 @@ public class TrainController : MonoBehaviour
     private bool coroutineFinished = false;
     private int defaultLayer;
     private int trainLayer;
+    public SceneLoader.Scenes nextScene;
     private void Awake()
     {
         defaultLayer = LayerMask.NameToLayer("Default");
@@ -49,7 +50,7 @@ public class TrainController : MonoBehaviour
             }
             else
             {
-                //TODO: player drives to next station
+                SceneLoader.Load(nextScene);
             }
         }
     }

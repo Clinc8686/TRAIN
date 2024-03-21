@@ -17,6 +17,8 @@ public class Player : MonoBehaviour
     private Rigidbody2D rb;
     private SpriteRenderer _spriteRenderer;
     private Animator animator;
+    private int layerMaskWithoutPlayerTrain;
+    private bool firstStep = true;
 
     private void Awake()
     {
@@ -26,6 +28,10 @@ public class Player : MonoBehaviour
 
         newPosition = transform.position;
         playerTargetIndicator.gameObject.SetActive(false);
+        
+        int playerLayer = LayerMask.NameToLayer("Player");
+        int trainLayer = LayerMask.NameToLayer("Train");
+        layerMaskWithoutPlayerTrain = ~(1 << playerLayer | 1 << trainLayer); //Exclude player and train layer
     }
 
     private void Start()
@@ -47,11 +53,38 @@ public class Player : MonoBehaviour
 
     private void FixedUpdate()
     {
-        MovePlayerToPosition();
+        if (CheckIfPlayerCanMoveForward())
+        {
+            MovePlayerToPosition();
+        }
     }
 
+    private bool CheckIfPlayerCanMoveForward()
+    {
+        float size = 0.2f;
+        if (firstStep)
+        {
+            size = 0.5f;
+            firstStep = false;
+        }
+        Vector3 direction = (newPosition - transform.position).normalized;
+        //Debug.DrawRay(transform.position, new Vector2(direction.x, direction.y)*2, Color.red, 2, false);
+        RaycastHit2D collision = Physics2D.BoxCast(transform.position, Vector2.one, 0f, direction, 1f, layerMaskWithoutPlayerTrain);
+        if (Physics2D.BoxCast(transform.position+direction, new Vector2(size, size), 0f, direction, size, layerMaskWithoutPlayerTrain))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    
+
+    
     private void InputAction_GameInputs_OnPlayerUsedLeftMouseButton(object sender, System.EventArgs e)
     {
+        firstStep = true;
         Vector3 mousePosition = Mouse.current.position.ReadValue();
         CheckPositionIsOnBottom(mousePosition);
     }

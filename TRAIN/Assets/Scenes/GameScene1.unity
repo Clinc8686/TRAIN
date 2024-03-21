@@ -131,6 +131,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1413297090607170187, guid: 917a7f078ec62c24aa9013c58b8ace10, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4475234572527618164, guid: 917a7f078ec62c24aa9013c58b8ace10, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -171,10 +175,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4768035043600621566, guid: 917a7f078ec62c24aa9013c58b8ace10, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: e0727e99bc3f002479d2cbddaccab6a7, type: 2}
     - target: {fileID: 5023198054770635720, guid: 917a7f078ec62c24aa9013c58b8ace10, type: 3}
       propertyPath: m_Name
       value: Station1
@@ -1377,7 +1377,7 @@ GameObject:
   - component: {fileID: 1001095593}
   - component: {fileID: 1001095597}
   - component: {fileID: 1001095592}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1991,7 +1991,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1967943738}
   - component: {fileID: 1967943739}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerVisual
   m_TagString: Untagged
   m_Icon: {fileID: 0}

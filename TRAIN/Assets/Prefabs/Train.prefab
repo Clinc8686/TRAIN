@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1170172775741473884}
   - component: {fileID: 3413423348609375051}
   - component: {fileID: 8146725474468899796}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PlayerEntersArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,7 +100,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7083241172044783713}
   - component: {fileID: 6251089438428269412}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Train
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -178,7 +178,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8360415839015876051}
   - component: {fileID: 1994218103841876062}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}

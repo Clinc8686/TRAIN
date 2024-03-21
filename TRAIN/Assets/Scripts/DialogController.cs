@@ -23,6 +23,7 @@ public class DialogController : MonoBehaviour
 
         Instance = this;
         dialogSystemContent.gameObject.SetActive(false);
+        DontDestroyOnLoad(this);
     }
     public void WriteText(string text)
     {

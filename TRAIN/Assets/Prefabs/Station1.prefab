@@ -195,7 +195,7 @@ GameObject:
   - component: {fileID: 2837284194755276455}
   - component: {fileID: 1874134508274119726}
   m_Layer: 0
-  m_Name: Treppe
+  m_Name: Stairs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -637,7 +637,7 @@ Animator:
   m_GameObject: {fileID: 8665208804269155282}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 0611e504e2de45c42b759e4ad8f9b6f5, type: 2}
+  m_Controller: {fileID: 9100000, guid: e0727e99bc3f002479d2cbddaccab6a7, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

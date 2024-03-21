@@ -131,6 +131,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 863339304651954912, guid: 917a7f078ec62c24aa9013c58b8ace10, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 863339304651954912, guid: 917a7f078ec62c24aa9013c58b8ace10, type: 3}
+      propertyPath: m_UsedByComposite
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4475234572527618164, guid: 917a7f078ec62c24aa9013c58b8ace10, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -171,13 +179,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4768035043600621566, guid: 917a7f078ec62c24aa9013c58b8ace10, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: e0727e99bc3f002479d2cbddaccab6a7, type: 2}
     - target: {fileID: 5023198054770635720, guid: 917a7f078ec62c24aa9013c58b8ace10, type: 3}
       propertyPath: m_Name
       value: Station1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6928570108438559673, guid: 917a7f078ec62c24aa9013c58b8ace10, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6928570108438559673, guid: 917a7f078ec62c24aa9013c58b8ace10, type: 3}
+      propertyPath: m_UsedByEffector
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6928570108438559673, guid: 917a7f078ec62c24aa9013c58b8ace10, type: 3}
+      propertyPath: m_UsedByComposite
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1259,6 +1275,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 707943a15480580498e7e566fd5f5414, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactableLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
   speed: 10
 --- !u!50 &1001095593
 Rigidbody2D:

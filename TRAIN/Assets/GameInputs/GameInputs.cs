@@ -8,6 +8,7 @@ public class GameInputs : MonoBehaviour
     public static GameInputs Instance { get; private set; }
 
     public event EventHandler OnPlayerUsedLeftMouseButton;
+    public event EventHandler OnPlayerInteracted;
 
     private PlayerInputActions _playerInputActions;
     private void OnEnable()
@@ -32,6 +33,11 @@ public class GameInputs : MonoBehaviour
     private void Start()
     {
         _playerInputActions.Player.MouseMoveAndInteract.performed += InputSystem_Player_MouseMoveAndInteract;
+        _playerInputActions.Player.InteractionButton.performed += InputSystem_Player_InteractionButton;
+    }
+    private void InputSystem_Player_InteractionButton(UnityEngine.InputSystem.InputAction.CallbackContext obj)
+    {
+        OnPlayerInteracted?.Invoke(this, EventArgs.Empty);
     }
     private void InputSystem_Player_MouseMoveAndInteract(UnityEngine.InputSystem.InputAction.CallbackContext obj)
     {

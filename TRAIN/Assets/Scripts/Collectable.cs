@@ -13,7 +13,6 @@ public class Collectable : MonoBehaviour
     private void Update()
     {
         float distanceToPlayer = Vector2.Distance(transform.position, player.transform.position);
-        Debug.Log(distanceToPlayer);
         if (distanceToPlayer < interactableRadius)
         {
             _playerIsInRangeToCollect = true;

@@ -35,6 +35,15 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""InteractionButton"",
+                    ""type"": ""Button"",
+                    ""id"": ""aafde643-6ad6-45d0-bf79-52567d7485bc"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -48,6 +57,17 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""action"": ""MouseMoveAndInteract"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ced0de56-fd1a-4beb-8f57-0f5477659565"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""InteractionButton"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -57,6 +77,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         // Player
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_MouseMoveAndInteract = m_Player.FindAction("MouseMoveAndInteract", throwIfNotFound: true);
+        m_Player_InteractionButton = m_Player.FindAction("InteractionButton", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -119,11 +140,13 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_Player;
     private List<IPlayerActions> m_PlayerActionsCallbackInterfaces = new List<IPlayerActions>();
     private readonly InputAction m_Player_MouseMoveAndInteract;
+    private readonly InputAction m_Player_InteractionButton;
     public struct PlayerActions
     {
         private @PlayerInputActions m_Wrapper;
         public PlayerActions(@PlayerInputActions wrapper) { m_Wrapper = wrapper; }
         public InputAction @MouseMoveAndInteract => m_Wrapper.m_Player_MouseMoveAndInteract;
+        public InputAction @InteractionButton => m_Wrapper.m_Player_InteractionButton;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -136,6 +159,9 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @MouseMoveAndInteract.started += instance.OnMouseMoveAndInteract;
             @MouseMoveAndInteract.performed += instance.OnMouseMoveAndInteract;
             @MouseMoveAndInteract.canceled += instance.OnMouseMoveAndInteract;
+            @InteractionButton.started += instance.OnInteractionButton;
+            @InteractionButton.performed += instance.OnInteractionButton;
+            @InteractionButton.canceled += instance.OnInteractionButton;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -143,6 +169,9 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @MouseMoveAndInteract.started -= instance.OnMouseMoveAndInteract;
             @MouseMoveAndInteract.performed -= instance.OnMouseMoveAndInteract;
             @MouseMoveAndInteract.canceled -= instance.OnMouseMoveAndInteract;
+            @InteractionButton.started -= instance.OnInteractionButton;
+            @InteractionButton.performed -= instance.OnInteractionButton;
+            @InteractionButton.canceled -= instance.OnInteractionButton;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -163,5 +192,6 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
     public interface IPlayerActions
     {
         void OnMouseMoveAndInteract(InputAction.CallbackContext context);
+        void OnInteractionButton(InputAction.CallbackContext context);
     }
 }

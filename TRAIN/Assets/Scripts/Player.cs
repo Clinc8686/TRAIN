@@ -9,6 +9,8 @@ using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
+    [SerializeField] private LayerMask interactableLayerMask;
+
     private Vector3 newPosition;
     public float speed = 10f;
     private Rigidbody2D rb;
@@ -20,11 +22,25 @@ public class Player : MonoBehaviour
         animator = GetComponent<Animator>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
+
+        newPosition = transform.position;
     }
 
     private void Start()
     {
         GameInputs.Instance.OnPlayerUsedLeftMouseButton += InputAction_GameInputs_OnPlayerUsedLeftMouseButton;
+        GameInputs.Instance.OnPlayerInteracted += InputAction_GameInputs_OnPlayerInteracted;
+    }
+
+    private void InputAction_GameInputs_OnPlayerInteracted(object sender, EventArgs e)
+    {
+        float interactableCheckRadius = 1f;
+        Collider2D[] interactableColliders = Physics2D.OverlapCircleAll(
+                                            transform.position, 
+                                            interactableCheckRadius, 
+                                            interactableLayerMask);
+
+        interactableColliders[0].GetComponent<IInteractable>().Interact();
     }
 
     private void FixedUpdate()
@@ -45,11 +61,12 @@ public class Player : MonoBehaviour
 
         if (hit.collider == null) return;
 
-        if (hit.collider.gameObject.TryGetComponent(out IInteractable interactable))
-        {
-            interactable.Interact(this);
-        }
-        else if(hit.collider.TryGetComponent<Collectable>(out Collectable collectable))
+        //if (hit.collider.gameObject.TryGetComponent(out IInteractable interactable))
+        //{
+        //    interactable.Interact(this);
+        //}
+        //else
+        if(hit.collider.TryGetComponent<Collectable>(out Collectable collectable))
         {
             if (!collectable.IsPlayerInRange()) return;
 

@@ -30,13 +30,10 @@ public class TrainController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        Debug.Log("0 " + col.gameObject.name);
         if (col.gameObject.TryGetComponent<Player>(out Player player) && player.transform.GetChild(0).TryGetComponent<SpriteRenderer>(out SpriteRenderer spriteRenderer))
         {
-            Debug.Log("1");
             if (!trainIsMoving)
             {
-                Debug.Log("2");
                 spriteRenderer.enabled = false;
             }
         }

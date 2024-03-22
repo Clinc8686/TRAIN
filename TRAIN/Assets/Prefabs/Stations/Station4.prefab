@@ -415,7 +415,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3979162001047847712, guid: 65fed500cc1e9a449b3708d5bf4b0df3, type: 3}
       propertyPath: m_Name
-      value: Train (1)
+      value: Train_Gelb
       objectReference: {fileID: 0}
     - target: {fileID: 7083241172044783713, guid: 65fed500cc1e9a449b3708d5bf4b0df3, type: 3}
       propertyPath: m_LocalScale.x
@@ -554,7 +554,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3979162001047847712, guid: 65fed500cc1e9a449b3708d5bf4b0df3, type: 3}
       propertyPath: m_Name
-      value: Train
+      value: Train_Gelb
       objectReference: {fileID: 0}
     - target: {fileID: 7083241172044783713, guid: 65fed500cc1e9a449b3708d5bf4b0df3, type: 3}
       propertyPath: m_LocalScale.x
@@ -693,7 +693,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3979162001047847712, guid: 65fed500cc1e9a449b3708d5bf4b0df3, type: 3}
       propertyPath: m_Name
-      value: Train (2)
+      value: Train_Gelb
       objectReference: {fileID: 0}
     - target: {fileID: 7083241172044783713, guid: 65fed500cc1e9a449b3708d5bf4b0df3, type: 3}
       propertyPath: m_LocalScale.x

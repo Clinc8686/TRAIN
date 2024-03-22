@@ -1,28 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Collectable : MonoBehaviour
 {
-    [SerializeField] private float interactableRadius;
+    [SerializeField] public float interactableRadius;
     [SerializeField] private CollectableSO collectableSO;
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private Player player;
+    public float distanceToPlayer;
 
     private bool _playerIsInRangeToCollect;
     private void Update()
     {
-        float distanceToPlayer = Vector2.Distance(transform.position, player.transform.position);
-        if (distanceToPlayer < interactableRadius)
-        {
-            _playerIsInRangeToCollect = true;
-            spriteRenderer.color = Color.red;
-        }
-        else
-        {
-            _playerIsInRangeToCollect = false;
-            spriteRenderer.color = new Color(255, 255, 255);
-        }
+        distanceToPlayer = Vector2.Distance(transform.position, player.transform.position);
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

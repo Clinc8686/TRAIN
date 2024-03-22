@@ -48,7 +48,7 @@ public class Player : MonoBehaviour
 
     private void InputAction_GameInputs_OnPlayerInteracted(object sender, EventArgs e)
     {
-        float interactableCheckRadius = 1f;
+        float interactableCheckRadius = 10f;
         Collider2D[] interactableColliders = Physics2D.OverlapCircleAll(
                                             transform.position, 
                                             interactableCheckRadius, 
@@ -117,7 +117,7 @@ public class Player : MonoBehaviour
 
         if (hit.collider == null) return;
 
-        if (hit.collider.TryGetComponent<Confiner>(out Confiner confiner)) return;
+        //if (hit.collider.TryGetComponent<Confiner>(out Confiner confiner)) return;
 
         //if (hit.collider.gameObject.TryGetComponent(out IInteractable interactable))
         //{

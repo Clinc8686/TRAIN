@@ -230,7 +230,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTargetIndicator: {fileID: 0}
-  speed: 15
+  speed: 20
   animator: {fileID: 4165501448534160742}
   interactableLayerMask:
     serializedVersion: 2

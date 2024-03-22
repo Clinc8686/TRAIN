@@ -511,7 +511,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -536,7 +536,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 8.55
+  orthographic size: 17.28
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -622,6 +622,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1142693349607704457, guid: ac8037ba2cf1fd8478f66d566cae64f8, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3042b74de7393034f9e4a5cdf23ff1f0, type: 3}
     - target: {fileID: 4475234572527618164, guid: ac8037ba2cf1fd8478f66d566cae64f8, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.5
@@ -683,7 +687,12 @@ PrefabInstance:
       value: Station4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 7664090052569348839, guid: ac8037ba2cf1fd8478f66d566cae64f8, type: 3}
+    - {fileID: 1413297090607170187, guid: ac8037ba2cf1fd8478f66d566cae64f8, type: 3}
+    - {fileID: 8665208804269155282, guid: ac8037ba2cf1fd8478f66d566cae64f8, type: 3}
+    - {fileID: 5319168119822495171, guid: ac8037ba2cf1fd8478f66d566cae64f8, type: 3}
+    - {fileID: 9015607302876741969, guid: ac8037ba2cf1fd8478f66d566cae64f8, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac8037ba2cf1fd8478f66d566cae64f8, type: 3}

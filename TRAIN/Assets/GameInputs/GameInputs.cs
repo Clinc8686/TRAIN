@@ -18,11 +18,14 @@ public class GameInputs : MonoBehaviour
     }
     private void OnDisable()
     {
-        _playerInputActions.Disable();
+        if (_playerInputActions != null)
+        {
+            _playerInputActions.Disable(); 
+        }
     }
     private void Awake()
     {
-        DontDestroyOnLoad(this.gameObject);
+        //DontDestroyOnLoad(this.gameObject);
         if(Instance != null)
         {
             Destroy(gameObject);
@@ -42,5 +45,6 @@ public class GameInputs : MonoBehaviour
     private void InputSystem_Player_MouseMoveAndInteract(UnityEngine.InputSystem.InputAction.CallbackContext obj)
     {
         OnPlayerUsedLeftMouseButton?.Invoke(this, EventArgs.Empty);
+        Debug.Log("Hier");
     }
 }

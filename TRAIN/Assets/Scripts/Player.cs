@@ -9,9 +9,10 @@ using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
-    private const string PLAYER_MOVE_TOP_LEFT = "TopLeft";
-    private const string PLAYER_MOVE_BOTTOM_RIGHT = "BackRight";
-    private const string PLAYER_MOVE_BOTTOM_LEFT = "BackLeft";
+    private const string PLAYER_MOVE_TOP_LEFT = "BackLeft";
+    private const string PLAYER_MOVE_BOTTOM_RIGHT = "TopRight";
+    private const string PLAYER_MOVE_BOTTOM_LEFT = "TopLeft";
+    private const string PLAYER_MOVE_TOP_RIGHT = "BackRight";
 
     [SerializeField] private Transform playerTargetIndicator;
     [SerializeField] private LayerMask interactableLayerMask;
@@ -80,16 +81,16 @@ public class Player : MonoBehaviour
 
     private bool CheckIfPlayerCanMoveForward()
     {
-        float size = 0.2f;
+        float boxCastSize = 0.2f;
+        float boxCastDistance = 0.2f;
+        
         if (firstStep)
         {
-            size = 0.5f;
+            boxCastDistance = 0.5f;
             firstStep = false;
         }
         Vector3 direction = (newPosition - transform.position).normalized;
-        //Debug.DrawRay(transform.position, new Vector2(direction.x, direction.y)*2, Color.red, 2, false);
-        RaycastHit2D collision = Physics2D.BoxCast(transform.position, Vector2.one, 0f, direction, 1f, layerMaskWithoutPlayerTrain);
-        if (Physics2D.BoxCast(transform.position+direction, new Vector2(size, size), 0f, direction, size, layerMaskWithoutPlayerTrain))
+        if (Physics2D.BoxCast(transform.position+direction, new Vector2(boxCastSize, boxCastSize), 0f, direction, boxCastDistance, layerMaskWithoutPlayerTrain))
         {
             return true;
         }
@@ -114,6 +115,8 @@ public class Player : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast(clickPosition, Vector2.zero);
 
         if (hit.collider == null) return;
+
+        if (hit.collider.TryGetComponent<Confiner>(out Confiner confiner)) return;
 
         //if (hit.collider.gameObject.TryGetComponent(out IInteractable interactable))
         //{
@@ -140,59 +143,49 @@ public class Player : MonoBehaviour
     
     private void MovePlayerToPosition()
     {
-        //float minTargetPosition = .5f;
-        //float slowDownRange = 3f;
-        
         Vector3 direction = (newPosition - transform.position).normalized;
         direction.z = 0f;
-        float distance = Vector3.Distance(transform.position, newPosition);
-
-        /*if (distance > minTargetPosition)
-        {
-            Debug.Log("Vector not null");
-            animator.SetFloat("X", direction.x);
-            animator.SetFloat("Y", direction.y);
-            
-            animator.SetBool("IsWalking", true);
-        }
-        else
-        {
-            Debug.Log("player idle");
-            animator.SetBool("IsWalking", false);
-        }*/
 
         transform.position = Vector2.MoveTowards(transform.position, newPosition, Time.deltaTime * speed);
-        //if (distance >= slowDownRange)
-        //{
-        //    transform.position += direction * speed * Time.deltaTime;
-        //} 
-        //else
-        //{
-        //    transform.position += direction * (speed * (distance / slowDownRange)) * Time.deltaTime;
-        //}
     }
     private void PlayerAnimations()
     {
-        Vector2 playerPosition = transform.position;
-
         if(_isWalking)
         {
-            if(playerPosition.x >= newPosition.x && playerPosition.y <= newPosition.y)
+            Vector3 direction = (newPosition - transform.position).normalized;
+            if (direction.x > 0.01f && direction.y > 0.01f)
+            {
+                animator.SetBool(PLAYER_MOVE_TOP_LEFT, false);
+                animator.SetBool(PLAYER_MOVE_TOP_RIGHT, true);
+                animator.SetBool(PLAYER_MOVE_BOTTOM_LEFT, false);
+                animator.SetBool(PLAYER_MOVE_BOTTOM_RIGHT, false);
+            }
+            else if (direction.x < -0.01f && direction.y < -0.01f)
+            {
+                animator.SetBool(PLAYER_MOVE_TOP_LEFT, false);
+                animator.SetBool(PLAYER_MOVE_TOP_RIGHT, false);
+                animator.SetBool(PLAYER_MOVE_BOTTOM_LEFT, true);
+                animator.SetBool(PLAYER_MOVE_BOTTOM_RIGHT, false);
+            }
+            else if (direction.x < -0.01f && direction.y > 0.01f)
             {
                 animator.SetBool(PLAYER_MOVE_TOP_LEFT, true);
+                animator.SetBool(PLAYER_MOVE_TOP_RIGHT, false);
+                animator.SetBool(PLAYER_MOVE_BOTTOM_LEFT, false);
+                animator.SetBool(PLAYER_MOVE_BOTTOM_RIGHT, false);
             }
-            else if(playerPosition.x >= newPosition.x && playerPosition.y >= newPosition.y)
+            else if (direction.x > 0.01f && direction.y < -0.01f)
             {
+                animator.SetBool(PLAYER_MOVE_TOP_LEFT, false);
+                animator.SetBool(PLAYER_MOVE_TOP_RIGHT, false);
+                animator.SetBool(PLAYER_MOVE_BOTTOM_LEFT, false);
                 animator.SetBool(PLAYER_MOVE_BOTTOM_RIGHT, true);
-            }
-            else if(playerPosition.x <= newPosition.x && playerPosition.y >= newPosition.x)
-            {
-                animator.SetBool(PLAYER_MOVE_BOTTOM_LEFT, true);
             }
         }
         else
         {
             animator.SetBool(PLAYER_MOVE_TOP_LEFT, false);
+            animator.SetBool(PLAYER_MOVE_TOP_RIGHT, false);
             animator.SetBool(PLAYER_MOVE_BOTTOM_LEFT, false);
             animator.SetBool(PLAYER_MOVE_BOTTOM_RIGHT, false);
         }

@@ -20,19 +20,16 @@ public class Selection : MonoBehaviour, IPointerClickHandler, IPointerEnterHandl
         selectionManager.Instance.SetCurrentSelection(this);
         if (selectionManager.Instance.previouslySelectedSprite == null)
         {
-            Debug.Log("null");
             selectionManager.Instance.PreviouslySelected(_renderer);
             _renderer.color = Color.green;
         }
         else if (selectionManager.Instance.previouslySelectedSprite == _renderer)
         {
-            Debug.Log("deselect");
             _renderer.color = Color.white;
             selectionManager.Instance.PreviouslySelected(null);
         }
         else
         {
-            Debug.Log("other");
             selectionManager.Instance.previouslySelectedSprite.color = Color.white;
             _renderer.color = Color.green;
             selectionManager.Instance.PreviouslySelected(_renderer);

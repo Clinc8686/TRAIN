@@ -27,7 +27,6 @@ public class InventoryController : MonoBehaviour
     }
     public void AddNewElementToInventory(CollectableSO collectableSO)
     {
-        Debug.Log("Inventory");
         if (_index > inventoryContentSlots.Length - 1) return;
 
         if (_collectableSOList.Contains(collectableSO)) return;

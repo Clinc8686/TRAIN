@@ -81,14 +81,16 @@ public class Player : MonoBehaviour
 
     private bool CheckIfPlayerCanMoveForward()
     {
-        float size = 0.2f;
+        float boxCastSize = 0.2f;
+        float boxCastDistance = 0.2f;
+        
         if (firstStep)
         {
-            size = 0.5f;
+            boxCastDistance = 0.5f;
             firstStep = false;
         }
         Vector3 direction = (newPosition - transform.position).normalized;
-        if (Physics2D.BoxCast(transform.position+direction, new Vector2(size, size), 0f, direction, size, layerMaskWithoutPlayerTrain))
+        if (Physics2D.BoxCast(transform.position+direction, new Vector2(boxCastSize, boxCastSize), 0f, direction, boxCastDistance, layerMaskWithoutPlayerTrain))
         {
             return true;
         }

@@ -18,7 +18,10 @@ public class GameInputs : MonoBehaviour
     }
     private void OnDisable()
     {
-        _playerInputActions.Disable();
+        if (_playerInputActions != null)
+        {
+            _playerInputActions.Disable(); 
+        }
     }
     private void Awake()
     {

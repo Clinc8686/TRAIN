@@ -32,7 +32,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Station2Train2
+  m_Name: Station1_and_2_Train2
   serializedVersion: 5
   m_AnimatorParameters: []
   m_AnimatorLayers:

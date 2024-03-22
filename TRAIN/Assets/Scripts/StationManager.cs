@@ -35,7 +35,7 @@ public class StationManager : MonoBehaviour
     
     void Update()
     {
-        //Important: Train animation lenght must be 10 seconds
+        //Important: Train animation lenght must be shorter than 10 seconds
         timer += Time.deltaTime;
         if (timer > 10)
         {

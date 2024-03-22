@@ -9,6 +9,8 @@ public class TrainController : MonoBehaviour
     private bool coroutineFinished = false;
     private int defaultLayer;
     private int trainLayer;
+    private bool trainContainsPlayer = false;
+    
     public SceneLoader.Scenes nextScene;
     private void Awake()
     {
@@ -36,6 +38,7 @@ public class TrainController : MonoBehaviour
             if (!trainIsMoving)
             {
                 spriteRenderer.enabled = false;
+                trainContainsPlayer = true;
             }
         }
     }
@@ -47,10 +50,14 @@ public class TrainController : MonoBehaviour
             if (!trainIsMoving)
             {
                 spriteRenderer.enabled = true;
+                trainContainsPlayer = false;
             }
             else
             {
-                SceneLoader.Load(nextScene);
+                if (trainContainsPlayer)
+                {
+                    SceneLoader.Load(nextScene);
+                }
             }
         }
     }

@@ -23,12 +23,12 @@ public class Interactable : MonoBehaviour, IInteractable
         }
     }
     public void Interact()
-   {
+    {
         float distanceToPlayer = Vector3.Distance(player.transform.position, transform.position);
         Debug.Log(distanceToPlayer);
         if (distanceToPlayer > interactionDistance) return;
 
         Debug.Log("Interacted");
         DialogController.Instance.WriteText(dialogTextInput);
-   }
+    }
 }

@@ -48,6 +48,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 707943a15480580498e7e566fd5f5414, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerTargetIndicator: {fileID: 0}
+  interactableLayerMask:
+    serializedVersion: 2
+    m_Bits: 64
   speed: 10
 --- !u!58 &4832589401423964743
 CircleCollider2D:
@@ -121,7 +125,7 @@ Animator:
   m_GameObject: {fileID: 1655525845626117652}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1e8e7140a1a2cb443b4d525eaec77b47, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

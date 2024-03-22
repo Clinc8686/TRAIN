@@ -131,10 +131,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1413297090607170187, guid: 917a7f078ec62c24aa9013c58b8ace10, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4475234572527618164, guid: 917a7f078ec62c24aa9013c58b8ace10, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -175,20 +171,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4501110441617148710, guid: 917a7f078ec62c24aa9013c58b8ace10, type: 3}
-      propertyPath: nextScene
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 5023198054770635720, guid: 917a7f078ec62c24aa9013c58b8ace10, type: 3}
       propertyPath: m_Name
       value: Station1
       objectReference: {fileID: 0}
-    - target: {fileID: 6173066546312866431, guid: 917a7f078ec62c24aa9013c58b8ace10, type: 3}
-      propertyPath: nextScene
-      value: 4
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1853661189524614038, guid: 917a7f078ec62c24aa9013c58b8ace10, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

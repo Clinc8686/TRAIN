@@ -235,3 +235,6 @@ MonoBehaviour:
     m_Bits: 64
   speed: 10
   animator: {fileID: 4165501448534160742}
+  layerMaskForClickAndPoint:
+    serializedVersion: 2
+    m_Bits: 503

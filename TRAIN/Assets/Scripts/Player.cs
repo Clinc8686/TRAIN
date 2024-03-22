@@ -116,6 +116,8 @@ public class Player : MonoBehaviour
 
         if (hit.collider == null) return;
 
+        if (hit.collider.TryGetComponent<Confiner>(out Confiner confiner)) return;
+
         //if (hit.collider.gameObject.TryGetComponent(out IInteractable interactable))
         //{
         //    interactable.Interact(this);

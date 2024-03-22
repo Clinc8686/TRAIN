@@ -1503,6 +1503,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4501110441617148710, guid: 2e053b594960d7b4b9294dbd2acd3ab3, type: 3}
+      propertyPath: nextScene
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5023198054770635720, guid: 2e053b594960d7b4b9294dbd2acd3ab3, type: 3}
       propertyPath: m_Name
       value: Station5

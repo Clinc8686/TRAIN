@@ -2032,6 +2032,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6945182705644826968, guid: fbef2cac253c4b749b757be795efeed2, type: 3}
+      propertyPath: nextScene
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7470597589575283727, guid: fbef2cac253c4b749b757be795efeed2, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.7

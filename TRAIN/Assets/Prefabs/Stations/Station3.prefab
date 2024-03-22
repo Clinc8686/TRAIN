@@ -197,7 +197,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3979162001047847712, guid: 65fed500cc1e9a449b3708d5bf4b0df3, type: 3}
       propertyPath: m_Name
-      value: Train (1)
+      value: Train_Gelb
       objectReference: {fileID: 0}
     - target: {fileID: 3979162001047847712, guid: 65fed500cc1e9a449b3708d5bf4b0df3, type: 3}
       propertyPath: m_IsActive
@@ -336,7 +336,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3979162001047847712, guid: 65fed500cc1e9a449b3708d5bf4b0df3, type: 3}
       propertyPath: m_Name
-      value: Train
+      value: Train_Gelb
       objectReference: {fileID: 0}
     - target: {fileID: 3979162001047847712, guid: 65fed500cc1e9a449b3708d5bf4b0df3, type: 3}
       propertyPath: m_IsActive
@@ -479,7 +479,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 4c63a12d1d9c8b64f9dd747c8e507822, type: 3}
     - target: {fileID: 3979162001047847712, guid: 65fed500cc1e9a449b3708d5bf4b0df3, type: 3}
       propertyPath: m_Name
-      value: Train (2)
+      value: Train_Rot
       objectReference: {fileID: 0}
     - target: {fileID: 3979162001047847712, guid: 65fed500cc1e9a449b3708d5bf4b0df3, type: 3}
       propertyPath: m_IsActive

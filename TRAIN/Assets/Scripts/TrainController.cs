@@ -37,6 +37,11 @@ public class TrainController : MonoBehaviour
         {
             if (!trainIsMoving)
             {
+                //TODO: CHeck InventoryController
+                if (InventoryController.Instance.HasAllInventoryElements())
+                {
+                    
+                }
                 spriteRenderer.enabled = false;
                 trainContainsPlayer = true;
             }

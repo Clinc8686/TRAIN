@@ -1297,14 +1297,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -5963283495909376393, guid: 0f77d6bb820966543852547431b5bff1, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -5963283495909376393, guid: 0f77d6bb820966543852547431b5bff1, type: 3}
-      propertyPath: playerTargetIndicator
-      value: 
-      objectReference: {fileID: 1663055298}
     - target: {fileID: 6998607733572335798, guid: 0f77d6bb820966543852547431b5bff1, type: 3}
       propertyPath: m_Name
       value: newPlayer
@@ -1365,7 +1357,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 1558892238}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 707943a15480580498e7e566fd5f5414, type: 3}
   m_Name: 

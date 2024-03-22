@@ -1134,7 +1134,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 11
+  orthographic size: 17.5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1861,6 +1861,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Station2
       objectReference: {fileID: 0}
+    - target: {fileID: 6707385217506546096, guid: e6b4e560db17cc6408bbe59844131a97, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6707385217506546096, guid: e6b4e560db17cc6408bbe59844131a97, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2555,6 +2563,18 @@ PrefabInstance:
       propertyPath: playerTargetIndicator
       value: 
       objectReference: {fileID: 593394971}
+    - target: {fileID: 1325268022389419123, guid: 0f77d6bb820966543852547431b5bff1, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1325268022389419123, guid: 0f77d6bb820966543852547431b5bff1, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1325268022389419123, guid: 0f77d6bb820966543852547431b5bff1, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 6998607733572335798, guid: 0f77d6bb820966543852547431b5bff1, type: 3}
       propertyPath: m_Name
       value: newPlayer
@@ -2938,9 +2958,9 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 974784945}
+  - {fileID: 1703734171}
   - {fileID: 808332507}
   - {fileID: 6961120262375483726}
-  - {fileID: 1703734171}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}

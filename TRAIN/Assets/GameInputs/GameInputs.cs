@@ -25,7 +25,7 @@ public class GameInputs : MonoBehaviour
     }
     private void Awake()
     {
-        DontDestroyOnLoad(this.gameObject);
+        //DontDestroyOnLoad(this.gameObject);
         if(Instance != null)
         {
             Destroy(gameObject);
@@ -45,5 +45,6 @@ public class GameInputs : MonoBehaviour
     private void InputSystem_Player_MouseMoveAndInteract(UnityEngine.InputSystem.InputAction.CallbackContext obj)
     {
         OnPlayerUsedLeftMouseButton?.Invoke(this, EventArgs.Empty);
+        Debug.Log("Hier");
     }
 }

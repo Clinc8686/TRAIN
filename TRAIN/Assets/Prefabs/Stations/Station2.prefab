@@ -204,23 +204,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7083241172044783713, guid: 65fed500cc1e9a449b3708d5bf4b0df3, type: 3}
       propertyPath: m_LocalScale.x
-      value: -1
+      value: -1.7
       objectReference: {fileID: 0}
     - target: {fileID: 7083241172044783713, guid: 65fed500cc1e9a449b3708d5bf4b0df3, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 1.7
       objectReference: {fileID: 0}
     - target: {fileID: 7083241172044783713, guid: 65fed500cc1e9a449b3708d5bf4b0df3, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1
+      value: 1.7
       objectReference: {fileID: 0}
     - target: {fileID: 7083241172044783713, guid: 65fed500cc1e9a449b3708d5bf4b0df3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.01
+      value: 9.57
       objectReference: {fileID: 0}
     - target: {fileID: 7083241172044783713, guid: 65fed500cc1e9a449b3708d5bf4b0df3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.24
+      value: -2.37
       objectReference: {fileID: 0}
     - target: {fileID: 7083241172044783713, guid: 65fed500cc1e9a449b3708d5bf4b0df3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -256,7 +256,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7083241172044783713, guid: 65fed500cc1e9a449b3708d5bf4b0df3, type: 3}
       propertyPath: m_ConstrainProportionsScale
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8146725474468899796, guid: 65fed500cc1e9a449b3708d5bf4b0df3, type: 3}
       propertyPath: nextScene
@@ -309,7 +309,7 @@ Animator:
   m_GameObject: {fileID: 2816402090142133308}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f3b6ad40da364dc4fbdb13640b1dadf3, type: 2}
+  m_Controller: {fileID: 9100000, guid: ed5690a5f3fe2b4489a8a288f82e9fbc, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -347,23 +347,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7083241172044783713, guid: 65fed500cc1e9a449b3708d5bf4b0df3, type: 3}
       propertyPath: m_LocalScale.x
-      value: -1
+      value: -1.7
       objectReference: {fileID: 0}
     - target: {fileID: 7083241172044783713, guid: 65fed500cc1e9a449b3708d5bf4b0df3, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 1.7
       objectReference: {fileID: 0}
     - target: {fileID: 7083241172044783713, guid: 65fed500cc1e9a449b3708d5bf4b0df3, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1
+      value: 1.7
       objectReference: {fileID: 0}
     - target: {fileID: 7083241172044783713, guid: 65fed500cc1e9a449b3708d5bf4b0df3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.01
+      value: 46.55
       objectReference: {fileID: 0}
     - target: {fileID: 7083241172044783713, guid: 65fed500cc1e9a449b3708d5bf4b0df3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.24
+      value: -30.5
       objectReference: {fileID: 0}
     - target: {fileID: 7083241172044783713, guid: 65fed500cc1e9a449b3708d5bf4b0df3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -399,7 +399,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7083241172044783713, guid: 65fed500cc1e9a449b3708d5bf4b0df3, type: 3}
       propertyPath: m_ConstrainProportionsScale
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8360415839015876051, guid: 65fed500cc1e9a449b3708d5bf4b0df3, type: 3}
       propertyPath: m_LocalScale.x
@@ -415,11 +415,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8360415839015876051, guid: 65fed500cc1e9a449b3708d5bf4b0df3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 17.37
+      value: 8.18
       objectReference: {fileID: 0}
     - target: {fileID: 8360415839015876051, guid: 65fed500cc1e9a449b3708d5bf4b0df3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.36
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8360415839015876051, guid: 65fed500cc1e9a449b3708d5bf4b0df3, type: 3}
       propertyPath: m_ConstrainProportionsScale
@@ -448,7 +448,7 @@ Animator:
   m_GameObject: {fileID: 2923905880331225133}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b13f69c7b04ce1543ba615abd606413a, type: 2}
+  m_Controller: {fileID: 9100000, guid: 9127c969dd31d4b46a1bf10e07b9f300, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -490,23 +490,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7083241172044783713, guid: 65fed500cc1e9a449b3708d5bf4b0df3, type: 3}
       propertyPath: m_LocalScale.x
-      value: -1
+      value: -1.7
       objectReference: {fileID: 0}
     - target: {fileID: 7083241172044783713, guid: 65fed500cc1e9a449b3708d5bf4b0df3, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 1.7
       objectReference: {fileID: 0}
     - target: {fileID: 7083241172044783713, guid: 65fed500cc1e9a449b3708d5bf4b0df3, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1
+      value: 1.7
       objectReference: {fileID: 0}
     - target: {fileID: 7083241172044783713, guid: 65fed500cc1e9a449b3708d5bf4b0df3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.01
+      value: 9.34
       objectReference: {fileID: 0}
     - target: {fileID: 7083241172044783713, guid: 65fed500cc1e9a449b3708d5bf4b0df3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.24
+      value: -2.31
       objectReference: {fileID: 0}
     - target: {fileID: 7083241172044783713, guid: 65fed500cc1e9a449b3708d5bf4b0df3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -542,7 +542,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7083241172044783713, guid: 65fed500cc1e9a449b3708d5bf4b0df3, type: 3}
       propertyPath: m_ConstrainProportionsScale
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8146725474468899796, guid: 65fed500cc1e9a449b3708d5bf4b0df3, type: 3}
       propertyPath: nextScene
@@ -600,7 +600,7 @@ Animator:
   m_GameObject: {fileID: 6115818267768737874}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f3b6ad40da364dc4fbdb13640b1dadf3, type: 2}
+  m_Controller: {fileID: 9100000, guid: ed5690a5f3fe2b4489a8a288f82e9fbc, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

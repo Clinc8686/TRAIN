@@ -20,7 +20,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 66c04f7409b5dfa42b5e55df071ec989, type: 2}
+  m_Motion: {fileID: 7400000, guid: 1a853de4b470ca548be17a14ea5ea588, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -32,7 +32,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Station1_and_2Train1
+  m_Name: Station1_Train2
   serializedVersion: 5
   m_AnimatorParameters: []
   m_AnimatorLayers:

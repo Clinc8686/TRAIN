@@ -14,6 +14,7 @@ public static class SceneLoader
         GameScene2,
         GameScene3,
         GameScene4,
+        GameScene5
     }
     private class SceneLoaderMonoBehaviour : MonoBehaviour {}
     private static Action onLoaderCallBack;

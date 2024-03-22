@@ -44,6 +44,15 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""TextSkip"",
+                    ""type"": ""Button"",
+                    ""id"": ""6fa15e37-41f9-4b47-a42f-982e6057f827"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -68,6 +77,17 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""action"": ""InteractionButton"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""674f541c-3703-41d5-9199-6286a4eda031"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""TextSkip"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -78,6 +98,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_MouseMoveAndInteract = m_Player.FindAction("MouseMoveAndInteract", throwIfNotFound: true);
         m_Player_InteractionButton = m_Player.FindAction("InteractionButton", throwIfNotFound: true);
+        m_Player_TextSkip = m_Player.FindAction("TextSkip", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -141,12 +162,14 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
     private List<IPlayerActions> m_PlayerActionsCallbackInterfaces = new List<IPlayerActions>();
     private readonly InputAction m_Player_MouseMoveAndInteract;
     private readonly InputAction m_Player_InteractionButton;
+    private readonly InputAction m_Player_TextSkip;
     public struct PlayerActions
     {
         private @PlayerInputActions m_Wrapper;
         public PlayerActions(@PlayerInputActions wrapper) { m_Wrapper = wrapper; }
         public InputAction @MouseMoveAndInteract => m_Wrapper.m_Player_MouseMoveAndInteract;
         public InputAction @InteractionButton => m_Wrapper.m_Player_InteractionButton;
+        public InputAction @TextSkip => m_Wrapper.m_Player_TextSkip;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -162,6 +185,9 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @InteractionButton.started += instance.OnInteractionButton;
             @InteractionButton.performed += instance.OnInteractionButton;
             @InteractionButton.canceled += instance.OnInteractionButton;
+            @TextSkip.started += instance.OnTextSkip;
+            @TextSkip.performed += instance.OnTextSkip;
+            @TextSkip.canceled += instance.OnTextSkip;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -172,6 +198,9 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @InteractionButton.started -= instance.OnInteractionButton;
             @InteractionButton.performed -= instance.OnInteractionButton;
             @InteractionButton.canceled -= instance.OnInteractionButton;
+            @TextSkip.started -= instance.OnTextSkip;
+            @TextSkip.performed -= instance.OnTextSkip;
+            @TextSkip.canceled -= instance.OnTextSkip;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -193,5 +222,6 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
     {
         void OnMouseMoveAndInteract(InputAction.CallbackContext context);
         void OnInteractionButton(InputAction.CallbackContext context);
+        void OnTextSkip(InputAction.CallbackContext context);
     }
 }

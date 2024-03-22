@@ -15,9 +15,10 @@ public class Player : MonoBehaviour
     private const string PLAYER_MOVE_TOP_RIGHT = "BackRight";
 
     [SerializeField] private Transform playerTargetIndicator;
-    [SerializeField] private LayerMask interactableLayerMask;
     [SerializeField] private float speed = 10f;
     [SerializeField] private Animator animator;
+    [SerializeField] private LayerMask interactableLayerMask;
+    [SerializeField] private LayerMask targetLayerMask;
 
     private Vector3 newPosition;
     private bool _isWalking = false;
@@ -112,7 +113,7 @@ public class Player : MonoBehaviour
     private void CheckPositionIsOnBottom(Vector3 position)
     {
         Vector3 clickPosition = Camera.main.ScreenToWorldPoint(position);        
-        RaycastHit2D hit = Physics2D.Raycast(clickPosition, Vector2.zero);
+        RaycastHit2D hit = Physics2D.Raycast(clickPosition, Vector2.zero, targetLayerMask);
 
         if (hit.collider == null) return;
 

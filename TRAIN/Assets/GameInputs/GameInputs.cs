@@ -9,6 +9,7 @@ public class GameInputs : MonoBehaviour
 
     public event EventHandler OnPlayerUsedLeftMouseButton;
     public event EventHandler OnPlayerInteracted;
+    public event EventHandler OnPlayerTextSkipped;
 
     private PlayerInputActions _playerInputActions;
     private void OnEnable()
@@ -37,6 +38,11 @@ public class GameInputs : MonoBehaviour
     {
         _playerInputActions.Player.MouseMoveAndInteract.performed += InputSystem_Player_MouseMoveAndInteract;
         _playerInputActions.Player.InteractionButton.performed += InputSystem_Player_InteractionButton;
+        _playerInputActions.Player.TextSkip.performed += InputSystem_Player_TextSkip;
+    }
+    private void InputSystem_Player_TextSkip(UnityEngine.InputSystem.InputAction.CallbackContext obj)
+    {
+        OnPlayerTextSkipped?.Invoke(this, EventArgs.Empty);
     }
     private void InputSystem_Player_InteractionButton(UnityEngine.InputSystem.InputAction.CallbackContext obj)
     {
@@ -45,6 +51,5 @@ public class GameInputs : MonoBehaviour
     private void InputSystem_Player_MouseMoveAndInteract(UnityEngine.InputSystem.InputAction.CallbackContext obj)
     {
         OnPlayerUsedLeftMouseButton?.Invoke(this, EventArgs.Empty);
-        Debug.Log("Hier");
     }
 }

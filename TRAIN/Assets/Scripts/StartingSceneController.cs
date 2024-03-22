@@ -4,15 +4,22 @@ using UnityEngine;
 
 public class StartingSceneController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private Player player;
+    [SerializeField] private string[] text;
 
-    // Update is called once per frame
-    void Update()
+    private int index = 0;
+    private void Start()
     {
-        
+        DialogController.Instance.WriteText(text, player);
+        //player.enabled = true;
+        //GameInputs.Instance.OnPlayerTextSkipped += PlayerInputSyste_GameInputs_OnPlayerTextSkipped;
+
+        player.enabled = false;
+        //DialogController.Instance.WriteText(text[index++]);
     }
+    //private void PlayerInputSyste_GameInputs_OnPlayerTextSkipped(object sender, System.EventArgs e)
+    //{
+    //    DialogController.Instance.ResetIsWritingState();
+    //    DialogController.Instance.WriteText(text[index++]);
+    //}
 }

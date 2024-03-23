@@ -215,6 +215,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AutomatOvergrown
       objectReference: {fileID: 0}
+    - target: {fileID: 7321619787117805802, guid: 7782b441438c1fc429307d88dd741127, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -528,6 +532,10 @@ PrefabInstance:
     - target: {fileID: 6671830692471418915, guid: dc16679e39cd3d845acf9a2619efd041, type: 3}
       propertyPath: m_Name
       value: Vogelscheuche
+      objectReference: {fileID: 0}
+    - target: {fileID: 6671830692471418915, guid: dc16679e39cd3d845acf9a2619efd041, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -945,39 +953,22 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 699466302}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 63b61ffe827582844addd874104ace8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 213327631}
   text:
-  - "Berlin, somewhere, sometime that's not yet day but not really night anymore
-    either and Budi wants nothing more than go get home. Maybe a D\xF6ner but too
-    late, already past his favourite place and you don't cheat on the guy who calls
-    you 'Chef, mit allem?' the way his guy did."
-  - Ears are still humming, the ringing almost gone but the rave was still in his
-    body. No words, just bass and around Budi the echo of his rave, the silence of
-    a subway station, the low sounds that belong to it. The silence of your way home
-  - The station is empty and the train is late, time enough for the rave to slowly
-    leave his body and thoughts about tomorrow pushing aside the idea of just getting
-    home and going to sleep.
-  - As you shake your pack of cigarettes and fine some still rattling inside, you
-    notice you're not entirely alone, a figure next to you on the platform waiting.
-    Budi takes an unconscious half-step away, patting his jacket for his lighter.
-  - When a small hands offers a lighter, Budi steps back, gladly taking the fire
-    and grunting something that could possibly be a thanks. "Hate when that happens.",
-    says a voice sounding even younger than the stature implied.
-  - Budi smokes in silence. No judging.
-  - After a moment of silence and smoking, the air shifts and a low wind heralds
-    the arrival of a subway. There's no ding-dong, no announcement as the figure
-    next to you chimes up again. "Can you come along for one station? I'm not supposed
-    to ride the subway alone." Budi hesitates a moment but as the train arrives he
-    thinks it's only fair, tit for tat, and gets on the train.
-  - The doors open and stepping onto the platform Budi is alone even before they
-    close again. There is no kid, just remnants of his cigarette and a subway station
-    that doesn't look familiar. Dit is nich Berlin, is it?
-  skipTextTransform: {fileID: 0}
+  - The doors open and Budi gets hit by the humidity of the air, the smell of turned
+    mulch and vegetation. Stepping onto the plattform looks like stepping into an
+    underground greenhouse. There are several seed beds, a scarecrow, bags and crates
+    full of crops.
+  - The doors open and Budi gets hit by the humidity of the air, the smell of turned
+    mulch and vegetation. Stepping onto the plattform looks like stepping into an
+    underground greenhouse. There are several seed beds, a scarecrow, bags and crates
+    full of crops.
+  skipTextTransform: {fileID: 1415286447}
 --- !u!4 &699466304
 Transform:
   m_ObjectHideFlags: 0
@@ -1284,6 +1275,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fbef2cac253c4b749b757be795efeed2, type: 3}
+--- !u!224 &1415286447 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 1297282019136853021, guid: 0afd9f501e0980e4aa253077323aa688, type: 3}
+  m_PrefabInstance: {fileID: 1552370594}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1479184612
 GameObject:
   m_ObjectHideFlags: 0

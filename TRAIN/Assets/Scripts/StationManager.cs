@@ -10,6 +10,7 @@ public class StationManager : MonoBehaviour
     private List<GameObject> trains = new List<GameObject>();
     private int nextTrain = 0;
     private float timer = 10f;
+    [SerializeField] private GameObject LastTrain;
     private void Awake()
     {
         if(Instance != null)
@@ -26,7 +27,7 @@ public class StationManager : MonoBehaviour
     {
         for (int i = 0; i < transform.childCount; i++)
         {
-            if (transform.GetChild(i).gameObject.layer == LayerMask.NameToLayer("Train"))
+            if (transform.GetChild(i).gameObject.layer == LayerMask.NameToLayer("Train") && transform.GetChild(i).gameObject != LastTrain)
             {
                 trains.Add(transform.GetChild(i).gameObject);
             }
@@ -39,9 +40,22 @@ public class StationManager : MonoBehaviour
         timer += Time.deltaTime;
         if (timer > 10)
         {
-            MoveNextTrain();
+            if (LastTrain != null && InventoryController.Instance._hasTicket && InventoryController.Instance._hasTrain)
+            {
+                CallOnlyLastTrain();
+            }
+            else
+            {
+                MoveNextTrain();
+            }
             timer = 0f;
         }
+    }
+
+    private void CallOnlyLastTrain()
+    {
+        DisableAllTrains();
+        LastTrain.SetActive(true);
     }
 
     public void OnCallTrainCLicked(int trainNumber)

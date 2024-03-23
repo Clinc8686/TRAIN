@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5329793923604300612}
   - component: {fileID: 3181353744862563182}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: InteractionSign
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58,7 +58,7 @@ GameObject:
   - component: {fileID: 5249049870956287670}
   - component: {fileID: 1454540441406534760}
   - component: {fileID: 4275021555841274318}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -82,7 +82,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 10.21, y: 18.73}
+  m_AnchoredPosition: {x: 7.4, y: 7.9}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &5249049870956287670
@@ -158,7 +158,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3782108705765840146}
   - component: {fileID: 2218947641429766169}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Visual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -175,7 +175,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5367222, y: 1.5367222, z: 1.5367222}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 894237943891024830}
@@ -243,7 +243,7 @@ GameObject:
   - component: {fileID: 8845042897615722769}
   - component: {fileID: 7022103688593314485}
   - component: {fileID: 1952262157471769844}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: InteractionSignText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -378,7 +378,7 @@ GameObject:
   - component: {fileID: 3469511601191589196}
   - component: {fileID: -6468075141820365272}
   - component: {fileID: -8093639488926763175}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: AutomatOvergrown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -431,10 +431,10 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 3.23}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -446,14 +446,14 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -1.1372992, y: 8.1194935}
-      - {x: -3.767539, y: 6.5234814}
-      - {x: -3.5895908, y: -4.6950994}
-      - {x: 0.7997201, y: -7.610067}
-      - {x: 3.935193, y: -6.127703}
-      - {x: 3.3020341, y: -5.6420536}
-      - {x: 3.2945576, y: 0.032584548}
-      - {x: 3.2938929, y: 5.3358808}
+    - - {x: -0.9904294, y: 9.000704}
+      - {x: -4.893531, y: 6.817217}
+      - {x: -4.519759, y: -9.98237}
+      - {x: 2.1215372, y: -14.414984}
+      - {x: 5.942399, y: -11.561844}
+      - {x: 5.505064, y: -5.935791}
+      - {x: 5.4486313, y: -0.75071585}
+      - {x: 5.69275, y: 4.748406}
   m_UseDelaunayMesh: 0
 --- !u!114 &-6468075141820365272
 MonoBehaviour:
@@ -467,7 +467,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 140c7509a8a252644ada791255a38b9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteRenderer: {fileID: 0}
+  spriteRenderer: {fileID: 2218947641429766169}
 --- !u!114 &-8093639488926763175
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -481,10 +481,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  interactionSignTransform: {fileID: 0}
-  interactionPointTransform: {fileID: 0}
-  dialogTextInput: 
-  interactionDistance: 1
+  interactionSignTransform: {fileID: 4632598606495243707}
+  dialogTextInput: Der Automat ist defekt.
+  interactionDistance: 10
 --- !u!1 &7726477959273380484
 GameObject:
   m_ObjectHideFlags: 0
@@ -496,7 +495,7 @@ GameObject:
   - component: {fileID: 8134946232010483766}
   - component: {fileID: 7910704792061818111}
   - component: {fileID: 2629002535273114049}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: InteractionSignBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}

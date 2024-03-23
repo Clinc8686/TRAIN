@@ -4,7 +4,6 @@ public class Interactable : MonoBehaviour, IInteractable
 {
     [SerializeField] private Player player;
     [SerializeField] private Transform interactionSignTransform;
-    [SerializeField] private Transform interactionPointTransform;
     [SerializeField] private string dialogTextInput;
     [SerializeField] private float interactionDistance = 1f;
 

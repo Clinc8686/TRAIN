@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5329793923604300612}
   - component: {fileID: 3181353744862563182}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: InteractionSign
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58,7 +58,7 @@ GameObject:
   - component: {fileID: 5249049870956287670}
   - component: {fileID: 1454540441406534760}
   - component: {fileID: 4275021555841274318}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -158,7 +158,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3782108705765840146}
   - component: {fileID: 2218947641429766169}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Visual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -243,7 +243,7 @@ GameObject:
   - component: {fileID: 8845042897615722769}
   - component: {fileID: 7022103688593314485}
   - component: {fileID: 1952262157471769844}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: InteractionSignText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -378,7 +378,7 @@ GameObject:
   - component: {fileID: 3469511601191589196}
   - component: {fileID: -6468075141820365272}
   - component: {fileID: -8093639488926763175}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: AutomatOvergrown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -431,7 +431,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -496,7 +496,7 @@ GameObject:
   - component: {fileID: 8134946232010483766}
   - component: {fileID: 7910704792061818111}
   - component: {fileID: 2629002535273114049}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: InteractionSignBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}

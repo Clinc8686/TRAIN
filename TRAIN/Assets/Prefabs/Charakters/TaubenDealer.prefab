@@ -181,6 +181,7 @@ MonoBehaviour:
   interactionSignTransform: {fileID: 888648096536922557}
   dialogTextInput: Uh du hast Samen? Dann lass mir dir hier was anderes geben:)
   interactionDistance: 10
+  collectableSO: {fileID: 11400000, guid: ce3dd6f669f405942961b00ea4147abf, type: 2}
 --- !u!114 &2463077014308547136
 MonoBehaviour:
   m_ObjectHideFlags: 0

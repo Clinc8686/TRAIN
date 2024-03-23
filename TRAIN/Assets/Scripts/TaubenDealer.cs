@@ -8,6 +8,7 @@ public class TaubenDealer : MonoBehaviour, IInteractable
     [SerializeField] private Transform interactionSignTransform;
     [SerializeField] private string dialogTextInput;
     [SerializeField] private float interactionDistance = 1f;
+    [SerializeField] private CollectableSO collectableSO;
     private void Update()
     {
         if (!InventoryController.Instance.HasSamen()) return;
@@ -31,5 +32,6 @@ public class TaubenDealer : MonoBehaviour, IInteractable
         if (distanceToPlayer > interactionDistance) return;
 
         DialogController.Instance.WriteText(dialogTextInput);
+        InventoryController.Instance.AddNewElementToInventory(collectableSO);
     }
 }

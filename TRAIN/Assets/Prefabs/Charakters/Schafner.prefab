@@ -451,7 +451,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1633770441766930781}
   - component: {fileID: 3511800157420516406}
-  - component: {fileID: 5545853701442506082}
+  - component: {fileID: 1883898212695258633}
   m_Layer: 6
   m_Name: Schafner
   m_TagString: Untagged
@@ -469,8 +469,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 22.58822, y: -4.3828554, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.3536, y: 1.3536, z: 1.3536}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 6867485387618229253}
   - {fileID: 8719125415482973334}
@@ -521,7 +521,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 8.34, y: 15.12}
   m_EdgeRadius: 0
---- !u!114 &5545853701442506082
+--- !u!114 &1883898212695258633
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -530,11 +530,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 5768337924701385131}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2bac07e72f6cafb4fb90857db517eb49, type: 3}
+  m_Script: {fileID: 11500000, guid: 1c8976ce9fd4e50418fbadd49ba55692, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  interactionSignTransform: {fileID: 8719125415482973334}
-  interactionPointTransform: {fileID: 0}
-  dialogTextInput: Hey ich bin Euli, whats up:)
+  interactionSignTransform: {fileID: 6867485387618229253}
+  dialogTextInput: 
   interactionDistance: 10
+  collectableSO: {fileID: 11400000, guid: de38cd7889fdbed458e98771395e5e83, type: 2}

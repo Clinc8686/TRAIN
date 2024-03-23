@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28f52f252cb54024b921b6059a47cab2, type: 3}
   m_Name: Bubads
   m_EditorClassIdentifier: 
-  collectableSprite: {fileID: 21300000, guid: 45fc587128b75c44e97e374c36ea60ab, type: 3}
+  collectableSprite: {fileID: 21300000, guid: 320a896a4e315f540a40c3af6f61e46b, type: 3}
   collectableName: Bubads

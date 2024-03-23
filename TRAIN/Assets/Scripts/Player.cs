@@ -48,7 +48,7 @@ public class Player : MonoBehaviour
 
     private void InputAction_GameInputs_OnPlayerInteracted(object sender, EventArgs e)
     {
-        float interactableCheckRadius = 10f;
+        float interactableCheckRadius = 20f;
         Collider2D[] interactableColliders = Physics2D.OverlapCircleAll(
                                             transform.position, 
                                             interactableCheckRadius, 

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 28f52f252cb54024b921b6059a47cab2, type: 3}
-  m_Name: Shade
+  m_Name: Train
   m_EditorClassIdentifier: 
   collectableSprite: {fileID: 21300000, guid: 4d03b7124d78c0442bdd4c76e7ce2dbe, type: 3}
-  collectableName: 
+  collectableName: Train

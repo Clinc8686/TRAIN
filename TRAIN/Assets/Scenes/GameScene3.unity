@@ -123,6 +123,103 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &16246236
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8093639488926763175, guid: 7782b441438c1fc429307d88dd741127, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 213327631}
+    - target: {fileID: -8093639488926763175, guid: 7782b441438c1fc429307d88dd741127, type: 3}
+      propertyPath: dialogTextInput
+      value: Der Automat ist defekt.
+      objectReference: {fileID: 0}
+    - target: {fileID: -8093639488926763175, guid: 7782b441438c1fc429307d88dd741127, type: 3}
+      propertyPath: interactionDistance
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: -1239147241732201947, guid: 7782b441438c1fc429307d88dd741127, type: 3}
+      propertyPath: m_Offset.x
+      value: 8.1
+      objectReference: {fileID: 0}
+    - target: {fileID: -1239147241732201947, guid: 7782b441438c1fc429307d88dd741127, type: 3}
+      propertyPath: m_Offset.y
+      value: -2.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 894237943891024830, guid: 7782b441438c1fc429307d88dd741127, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -15.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 894237943891024830, guid: 7782b441438c1fc429307d88dd741127, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 28.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 894237943891024830, guid: 7782b441438c1fc429307d88dd741127, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 894237943891024830, guid: 7782b441438c1fc429307d88dd741127, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 894237943891024830, guid: 7782b441438c1fc429307d88dd741127, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 894237943891024830, guid: 7782b441438c1fc429307d88dd741127, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 894237943891024830, guid: 7782b441438c1fc429307d88dd741127, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 894237943891024830, guid: 7782b441438c1fc429307d88dd741127, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 894237943891024830, guid: 7782b441438c1fc429307d88dd741127, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 894237943891024830, guid: 7782b441438c1fc429307d88dd741127, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3782108705765840146, guid: 7782b441438c1fc429307d88dd741127, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5367222
+      objectReference: {fileID: 0}
+    - target: {fileID: 3782108705765840146, guid: 7782b441438c1fc429307d88dd741127, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5367222
+      objectReference: {fileID: 0}
+    - target: {fileID: 3782108705765840146, guid: 7782b441438c1fc429307d88dd741127, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.5367222
+      objectReference: {fileID: 0}
+    - target: {fileID: 3782108705765840146, guid: 7782b441438c1fc429307d88dd741127, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 9.0608
+      objectReference: {fileID: 0}
+    - target: {fileID: 3782108705765840146, guid: 7782b441438c1fc429307d88dd741127, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.1608
+      objectReference: {fileID: 0}
+    - target: {fileID: 7321619787117805802, guid: 7782b441438c1fc429307d88dd741127, type: 3}
+      propertyPath: m_Name
+      value: AutomatOvergrown
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7782b441438c1fc429307d88dd741127, type: 3}
 --- !u!1 &90057717
 GameObject:
   m_ObjectHideFlags: 0
@@ -458,11 +555,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7968160631172219757, guid: 0f77d6bb820966543852547431b5bff1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 17.4
       objectReference: {fileID: 0}
     - target: {fileID: 7968160631172219757, guid: 0f77d6bb820966543852547431b5bff1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -36.2
       objectReference: {fileID: 0}
     - target: {fileID: 7968160631172219757, guid: 0f77d6bb820966543852547431b5bff1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -652,7 +749,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 34.67
+  orthographic size: 42
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2101,3 +2198,4 @@ SceneRoots:
   - {fileID: 213327630}
   - {fileID: 1116739316}
   - {fileID: 201702194}
+  - {fileID: 16246236}

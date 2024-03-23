@@ -1,5 +1,4 @@
 using System;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -8,104 +7,86 @@ public class Selection : MonoBehaviour, IPointerClickHandler, IPointerEnterHandl
     private SpriteRenderer _alreadySelectedSomething;
     private SpriteRenderer _renderer;
     private Collectable _collectable;
-    private int _oldPrioritisation;
+    public const int RED = 3;
+    public const int GREEN = 2;
+    public const int YELLOW = 1;
+    public const int WHITE = 0;
 
-    private void Start()
+    void Start()
     {
         _collectable = GetComponent<Collectable>();
         _renderer = GetComponent<SpriteRenderer>();
     }
 
-
     public void OnPointerClick(PointerEventData eventData)
     {
-        selectionManager.Instance.SetCurrentSelection(this);
-        if (selectionManager.Instance.previouslySelectedSprite == null)
+        if (selectionManager.Instance._currentSelection == this)
         {
-            selectionManager.Instance.PreviouslySelected(_renderer);
-            SetColor(2, true);
-        }
-        else if (selectionManager.Instance.previouslySelectedSprite == _renderer)
-        {
-            Debug.Log("deselect");
-            SetColor(0, true);
-            selectionManager.Instance.PreviouslySelected(null);
+            SetColor(WHITE);
+            selectionManager.Instance.SetCurrentSelection(null);
         }
         else
         {
-            Debug.Log("other");
-            //SetColor(0, true,false);
-            SetColor(2, true);
-            selectionManager.Instance.PreviouslySelected(_renderer);
+            SetColor(GREEN);
+            selectionManager.Instance.SetCurrentSelection(this);
+            if (selectionManager.Instance.PreviouslySelected != null)
+            {
+                selectionManager.Instance.PreviouslySelected.SetColor(WHITE);
+            }
+        }
+        if (selectionManager.Instance.CurrentHover == this)
+        {
+            SetColor(RED);
         }
     }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        SetColor(3, true);
+        selectionManager.Instance.CurrentHover = this;
+        SetColor(RED);
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        if (selectionManager.Instance.previouslySelectedSprite != null)
+        selectionManager.Instance.CurrentHover = null;
+        if (selectionManager.Instance._currentSelection == this)
         {
-            if (selectionManager.Instance.previouslySelectedSprite != _renderer)
-            {
-                SetColor(0, true);
-            }
-            else
-            {
-                SetColor(2, true);
-            }
+            SetColor(GREEN);
         }
         else
         {
-            SetColor(0, true);
+            SetColor(IsInRange() ? YELLOW : WHITE);
         }
+    }
+
+    private bool IsInRange()
+    {
+        return _collectable.distanceToPlayer < _collectable.interactableRadius;
     }
 
     private void Update()
     {
-        if (_collectable.distanceToPlayer < _collectable.interactableRadius)
+        bool isCurrentlySelected = selectionManager.Instance._currentSelection &&
+                                   selectionManager.Instance._currentSelection == this;
+        
+        bool isCurrentlyHovering = selectionManager.Instance.CurrentHover &&
+                                      selectionManager.Instance.CurrentHover == this;
+        //ändere nur RangeFarbe wenn nicht ausgewählt und nicht gehovered
+        if (!isCurrentlySelected && !isCurrentlyHovering && IsInRange())
         {
-            UpdatePrioritisation(1);
+            SetColor(YELLOW);
         }
     }
 
-    private void SetColor(int prioritisation, bool overrider = false, bool previouslySelected = true)
+    private void SetColor(int prioritisation)
     {
-        UpdatePrioritisation(prioritisation, overrider);
-
-        Debug.Log(prioritisation);
-        if (!previouslySelected)
+        _renderer.color = prioritisation switch
         {
-            selectionManager.Instance.previouslySelectedSprite.color = Color.white;
-        }
-        else
-        {
-            _renderer.color = prioritisation switch
-            {
-                3 => Color.red,
-                2 => Color.green,
-                1 => Color.yellow,
-                0 => Color.white,
-                _ => throw new Exception($"Unknown prio {prioritisation}"),
-            };
-        }
-    }
-
-    private void UpdatePrioritisation(int prioritisation, bool overrider = false)
-    {
-        if (!overrider)
-        {
-            if (prioritisation > _oldPrioritisation)
-            {
-                _oldPrioritisation = prioritisation;
-            }
-        }
-        else
-        {
-            _oldPrioritisation = prioritisation;
-        }
+            RED => Color.red,
+            GREEN => Color.green,
+            YELLOW => Color.yellow,
+            WHITE => Color.white,
+            _ => throw new Exception($"Unknown prio {prioritisation}"),
+        };
     }
 }

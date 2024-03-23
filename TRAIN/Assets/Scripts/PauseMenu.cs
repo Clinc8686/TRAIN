@@ -6,11 +6,16 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] private GameObject pauseMenu;
     [SerializeField] private GameObject optionsMenu;
     public GameObject pauseMenuCanvas;
-    public static bool IsPaused;
+    public bool isPaused;
+
+    public bool isOptions;
+
     // Start is called before the first frame update
     void Start()
     {
         pauseMenuCanvas.SetActive(false);
+        pauseMenu.SetActive(true);
+        optionsMenu.SetActive(false);
     }
 
     // Update is called once per frame
@@ -18,7 +23,7 @@ public class PauseMenu : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (IsPaused)
+            if (isPaused)
             {
                 ResumeGame();
             }
@@ -29,36 +34,40 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
-    public void PauseGame()
+    private void PauseGame()
     {
         pauseMenuCanvas.SetActive(true);
         Time.timeScale = 0f;
-        IsPaused = true;
+        isPaused = true;
     }
-    
+
     public void ResumeGame()
     {
-        pauseMenuCanvas.SetActive(false);
-        Time.timeScale = 1f;
-        IsPaused = false;
+        if (isOptions)
+        {
+            optionsMenu.SetActive(false);
+            pauseMenu.SetActive(true);
+            isOptions = false;
+        }
+        else
+        {
+            pauseMenuCanvas.SetActive(false);
+            Time.timeScale = 1f;
+            isPaused = false;
+        }
     }
 
     public void OptionsMenu()
     {
         optionsMenu.SetActive(true);
         pauseMenu.SetActive(false);
+        isOptions = true;
     }
-    
-    public void backButton()
-    {
-        optionsMenu.SetActive(false);
-        pauseMenu.SetActive(true);
-    }
-    
+
     public void GoToMainMenu()
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene("HomeMenuScene");
-        IsPaused = false;
+        isPaused = false;
     }
 }

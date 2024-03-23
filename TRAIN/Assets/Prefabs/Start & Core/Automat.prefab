@@ -111,7 +111,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 10.21, y: 18.73}
+  m_AnchoredPosition: {x: 4.4, y: 1.2}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &7246686596881424421
@@ -336,7 +336,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.7071, y: 1.7071, z: 1.7071}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2904618007055135991}
@@ -420,10 +420,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  interactionSignTransform: {fileID: 0}
-  interactionPointTransform: {fileID: 0}
+  interactionSignTransform: {fileID: 4542432209929134989}
   dialogTextInput: 
-  interactionDistance: 1
+  interactionDistance: 10
 --- !u!1 &8640224539112826020
 GameObject:
   m_ObjectHideFlags: 0

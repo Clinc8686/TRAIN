@@ -179,9 +179,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   interactionSignTransform: {fileID: 888648096536922557}
-  dialogTextInput: Uh du hast Samen? Dann lass mir dir hier was anderes geben:)
   interactionDistance: 10
   collectableSO: {fileID: 11400000, guid: ce3dd6f669f405942961b00ea4147abf, type: 2}
+  textWithOutSamen:
+  - Budi stands in front of a... person. A person in a trenchcoat with the head of
+    a Pidgeon. Not only struggling with that, Budi seems to have trouble trying to
+    face the pidgeon who turns it's head now and then blank eyes staring ever so
+    slightly off to the side.
+  - Budi stands in front of a... person. A person in a trenchcoat with the head of
+    a Pidgeon. Not only struggling with that, Budi seems to have trouble trying to
+    face the pidgeon who turns it's head now and then blank eyes staring ever so
+    slightly off to the side.
+  - Budi stands in front of a... person. A person in a trenchcoat with the head of
+    a Pidgeon. Not only struggling with that, Budi seems to have trouble trying to
+    face the pidgeon who turns it's head now and then blank eyes staring ever so
+    slightly off to the side.
+  textWithSamen:
+  - 
 --- !u!114 &2463077014308547136
 MonoBehaviour:
   m_ObjectHideFlags: 0

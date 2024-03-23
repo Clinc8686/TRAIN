@@ -248,7 +248,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   interactionSignTransform: {fileID: 4644425327782255641}
-  dialogTextInput: 
+  dialogTextInput: A whole lot of trash. Wrapping papers, plastic bags, a bachelor
+    thesis, to go-cups, a first edition mint sleave Charizard and a bunch of Pfandbons.
   interactionDistance: 10
 --- !u!1 &4314912249541160248
 GameObject:

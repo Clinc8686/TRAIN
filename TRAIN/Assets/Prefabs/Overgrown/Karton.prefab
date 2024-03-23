@@ -430,7 +430,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   interactionSignTransform: {fileID: 3047458148451946513}
-  dialogTextInput: 
+  dialogTextInput: It's basically a compost heap in a cardboard box. Not the smartest
+    idea but y'know...
   interactionDistance: 10
 --- !u!1 &8286513146011871303
 GameObject:

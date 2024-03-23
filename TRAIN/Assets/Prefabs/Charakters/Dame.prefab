@@ -436,7 +436,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 14.66, y: 30.48}
+  m_Size: {x: 14.66, y: 17.8}
   m_EdgeRadius: 0
 --- !u!114 &4357470361875096589
 MonoBehaviour:
@@ -465,7 +465,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   interactionSignTransform: {fileID: 4241099961812636671}
-  dialogTextInput: "Ich bin ne s\xFC\xDFe, s\xFC\xDFe, s\xFC\xDFe"
+  dialogTextInput: Budi has never felt so naked and sized up just by being looked
+    over in one solid gaze. The Dame in front of him is tall, even without the heels,
+    classy and gorgeous in a dress easily more expensive than Budi's last three apartments,
+    and the slight disdain with which she looks at him has its own kind of appeal. 
+    Budi doesn't know how to talk to a woman like that, even in a weird parallel
+    world.
   interactionDistance: 10
 --- !u!1 &6717219297548131236
 GameObject:
@@ -494,7 +499,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 370413301019861968}

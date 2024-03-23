@@ -6,6 +6,7 @@ public class Interactable : MonoBehaviour, IInteractable
 {
     [SerializeField] private Player player;
     [SerializeField] private Transform interactionSignTransform;
+    [SerializeField] private Transform interactionPointTransform;
     [SerializeField] private string dialogTextInput;
     [SerializeField] private float interactionDistance = 1f;
 
@@ -24,8 +25,8 @@ public class Interactable : MonoBehaviour, IInteractable
     }
     public void Interact()
     {
-        float distanceToPlayer = Vector3.Distance(player.transform.position, transform.position);
-        if (distanceToPlayer > interactionDistance) return;
+        //float distanceToPlayer = Vector3.Distance(player.transform.position, transform.position);
+        //if (distanceToPlayer > interactionDistance) return;
 
         DialogController.Instance.WriteText(dialogTextInput);
     }

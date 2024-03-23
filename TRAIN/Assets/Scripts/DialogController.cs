@@ -47,6 +47,12 @@ public class DialogController : MonoBehaviour
         _isWritingText = false;
         StopAllCoroutines();
     }
+    public void ResetWritingStateAndDeactivateUI()
+    {
+        _isWritingText = false;
+        StopAllCoroutines();
+        dialogSystemContent.gameObject.SetActive(false);
+    }
     private IEnumerator WriteTextDialog()
     {
         for (int i = 0; i < _dialog.Length; i++)

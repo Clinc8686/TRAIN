@@ -105,6 +105,8 @@ public class Player : MonoBehaviour
     
     private void InputAction_GameInputs_OnPlayerUsedLeftMouseButton(object sender, System.EventArgs e)
     {
+        //if (UtilsClass.Utils.IsPointerOverUI()) return;
+
         firstStep = true;
         Vector3 mousePosition = Mouse.current.position.ReadValue();
         CheckPositionIsOnBottom(mousePosition);
@@ -119,12 +121,11 @@ public class Player : MonoBehaviour
 
         //if (hit.collider.TryGetComponent<Confiner>(out Confiner confiner)) return;
 
-        //if (hit.collider.gameObject.TryGetComponent(out IInteractable interactable))
-        //{
-        //    interactable.Interact(this);
-        //}
-        //else
-        if(hit.collider.TryGetComponent<Collectable>(out Collectable collectable))
+        if (hit.collider.gameObject.TryGetComponent(out IInteractable interactable))
+        {
+            interactable.Interact();
+        }
+        else if (hit.collider.TryGetComponent<Collectable>(out Collectable collectable))
         {
             if (!collectable.IsPlayerInRange()) return;
 

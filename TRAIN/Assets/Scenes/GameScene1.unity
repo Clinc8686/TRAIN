@@ -852,12 +852,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 432378141}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 63b61ffe827582844addd874104ace8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 819271098}
   text:
   - "Berlin, somewhere, sometime that's not yet day but not really night anymore
     either and Budi wants nothing more than go get home. Maybe a D\xF6ner but too
@@ -1919,11 +1919,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1633770441766930781, guid: c1edcd97fdccd6c4a910921e0161aa43, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -56
+      value: -50.5
       objectReference: {fileID: 0}
     - target: {fileID: 1633770441766930781, guid: c1edcd97fdccd6c4a910921e0161aa43, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.1
+      value: 15.5
       objectReference: {fileID: 0}
     - target: {fileID: 1633770441766930781, guid: c1edcd97fdccd6c4a910921e0161aa43, type: 3}
       propertyPath: m_LocalPosition.z

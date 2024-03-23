@@ -739,33 +739,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2706339448331788569, guid: 7b7a6e758e1129d409d988c43a9ad782, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 1310883751}
     - target: {fileID: 3309826411549429182, guid: 7b7a6e758e1129d409d988c43a9ad782, type: 3}
       propertyPath: m_Name
       value: TaubenDealer
       objectReference: {fileID: 0}
-    - target: {fileID: 9050824210045289926, guid: 7b7a6e758e1129d409d988c43a9ad782, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.1237
-      objectReference: {fileID: 0}
-    - target: {fileID: 9050824210045289926, guid: 7b7a6e758e1129d409d988c43a9ad782, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.1237
-      objectReference: {fileID: 0}
-    - target: {fileID: 9050824210045289926, guid: 7b7a6e758e1129d409d988c43a9ad782, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.1237
-      objectReference: {fileID: 0}
+    - target: {fileID: 8821406969614272396, guid: 7b7a6e758e1129d409d988c43a9ad782, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1310883751}
     - target: {fileID: 9050824210045289926, guid: 7b7a6e758e1129d409d988c43a9ad782, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -22.8
+      value: -41.51
       objectReference: {fileID: 0}
     - target: {fileID: 9050824210045289926, guid: 7b7a6e758e1129d409d988c43a9ad782, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 32
+      value: 24.5
       objectReference: {fileID: 0}
     - target: {fileID: 9050824210045289926, guid: 7b7a6e758e1129d409d988c43a9ad782, type: 3}
       propertyPath: m_LocalPosition.z

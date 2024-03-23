@@ -116,9 +116,7 @@ public class Player : MonoBehaviour
     {
         Vector3 clickPosition = Camera.main.ScreenToWorldPoint(position);        
         RaycastHit2D hit = Physics2D.Raycast(clickPosition, Vector2.zero, targetLayerMask);
-
         if (hit.collider == null) return;
-
         if (hit.collider.TryGetComponent<NotInteractable>(out NotInteractable notInteractable))
         {
             Debug.Log("Hey");
@@ -126,10 +124,8 @@ public class Player : MonoBehaviour
         }
 
         //if (hit.collider.TryGetComponent<Confiner>(out Confiner confiner)) return;
-
         if (hit.collider.gameObject.TryGetComponent(out IInteractable interactable))
         {
-            Debug.Log("Hit interactable!");
             interactable.Interact();
         }
         else if (hit.collider.TryGetComponent<Collectable>(out Collectable collectable))

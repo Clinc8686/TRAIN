@@ -5,7 +5,6 @@ public class Gaertner: MonoBehaviour, IInteractable
     [SerializeField] private Player player;
     [SerializeField] private Transform interactionSignTransform;
     [SerializeField] private float interactionDistance = 1f;
-    [SerializeField] private GameObject DialogSystemContent;
     
     [SerializeField] private string[] text;
     [SerializeField] private Transform skipTextTransform;
@@ -16,7 +15,6 @@ public class Gaertner: MonoBehaviour, IInteractable
     private void Awake()
     {
         _hasFinishedJob = PlayerPrefs.GetInt("Gaertner");
-        Debug.Log("_hasFinishedJob " + _hasFinishedJob);
         if(_hasFinishedJob == 1)
         {
             _jobIsDone = true;
@@ -67,7 +65,6 @@ public class Gaertner: MonoBehaviour, IInteractable
     
     public void Interact()
     {   
-        Debug.Log(_jobIsDone + " " + !InventoryController.Instance.HasSun() + " ");
         if (_jobIsDone) return;
         
         float distanceToPlayer = Vector3.Distance(player.transform.position, transform.position);

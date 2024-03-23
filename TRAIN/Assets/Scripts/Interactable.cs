@@ -25,8 +25,8 @@ public class Interactable : MonoBehaviour, IInteractable
     }
     public void Interact()
     {
-        //float distanceToPlayer = Vector3.Distance(player.transform.position, transform.position);
-        //if (distanceToPlayer > interactionDistance) return;
+        float distanceToPlayer = Vector3.Distance(player.transform.position, transform.position);
+        if (distanceToPlayer > interactionDistance) return;
 
         DialogController.Instance.WriteText(dialogTextInput);
     }

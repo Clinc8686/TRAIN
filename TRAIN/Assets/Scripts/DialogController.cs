@@ -50,8 +50,8 @@ public class DialogController : MonoBehaviour
     public void ResetWritingStateAndDeactivateUI()
     {
         _isWritingText = false;
-        StopAllCoroutines();
         dialogSystemContent.gameObject.SetActive(false);
+        StopAllCoroutines();
     }
     private IEnumerator WriteTextDialog()
     {
@@ -86,4 +86,5 @@ public class DialogController : MonoBehaviour
         dialogSystemContent.gameObject.SetActive(false);
         player.enabled = true;
     }
+    public bool IsWriting() => _isWritingText;
 }

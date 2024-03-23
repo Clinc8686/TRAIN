@@ -323,7 +323,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3979162001047847712, guid: 65fed500cc1e9a449b3708d5bf4b0df3, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7083241172044783713, guid: 65fed500cc1e9a449b3708d5bf4b0df3, type: 3}
       propertyPath: m_LocalScale.x
@@ -470,7 +470,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3979162001047847712, guid: 65fed500cc1e9a449b3708d5bf4b0df3, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7083241172044783713, guid: 65fed500cc1e9a449b3708d5bf4b0df3, type: 3}
       propertyPath: m_LocalScale.x
@@ -603,6 +603,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4475234572527618164}
     m_Modifications:
+    - target: {fileID: 1994218103841876062, guid: 65fed500cc1e9a449b3708d5bf4b0df3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c739f91c27210124dbefe431c88bec5c, type: 3}
     - target: {fileID: 1994218103841876062, guid: 65fed500cc1e9a449b3708d5bf4b0df3, type: 3}
       propertyPath: m_SortingOrder
       value: -9

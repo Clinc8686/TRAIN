@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Interactable : MonoBehaviour, IInteractable
@@ -23,6 +21,7 @@ public class Interactable : MonoBehaviour, IInteractable
                interactionSignTransform.gameObject.SetActive(false);
         }
     }
+
     public void Interact()
     {
         float distanceToPlayer = Vector3.Distance(player.transform.position, transform.position);

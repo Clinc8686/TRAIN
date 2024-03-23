@@ -1,14 +1,11 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class selectionManager : MonoBehaviour
 {
     public static selectionManager Instance { get; private set; }
-    private Selection _currentSelection;
-    public SpriteRenderer previouslySelectedSprite;
+    public Selection _currentSelection { get; private set; }
+    public Selection PreviouslySelected { get; private set; }
+    public Selection CurrentHover { get; set; }
 
     private void Awake()
     {
@@ -22,11 +19,13 @@ public class selectionManager : MonoBehaviour
     }
     public void SetCurrentSelection(Selection selection)
     {
+        SetPreviouslySelected(_currentSelection);
         _currentSelection = selection;
     }
 
-    public void PreviouslySelected(SpriteRenderer newSelection)
+    
+    private void SetPreviouslySelected(Selection newSelection)
     {
-        previouslySelectedSprite = newSelection;
+        PreviouslySelected = newSelection;
     }
 }

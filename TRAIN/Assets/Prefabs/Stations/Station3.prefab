@@ -195,9 +195,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4475234572527618164}
     m_Modifications:
+    - target: {fileID: 1994218103841876062, guid: 65fed500cc1e9a449b3708d5bf4b0df3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4c63a12d1d9c8b64f9dd747c8e507822, type: 3}
     - target: {fileID: 3979162001047847712, guid: 65fed500cc1e9a449b3708d5bf4b0df3, type: 3}
       propertyPath: m_Name
-      value: Train_Gelb
+      value: Train_Rot
       objectReference: {fileID: 0}
     - target: {fileID: 3979162001047847712, guid: 65fed500cc1e9a449b3708d5bf4b0df3, type: 3}
       propertyPath: m_IsActive
@@ -334,9 +338,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4475234572527618164}
     m_Modifications:
+    - target: {fileID: 1994218103841876062, guid: 65fed500cc1e9a449b3708d5bf4b0df3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 0512560dd5b830f408ea6c1f6833b653, type: 3}
     - target: {fileID: 3979162001047847712, guid: 65fed500cc1e9a449b3708d5bf4b0df3, type: 3}
       propertyPath: m_Name
-      value: Train_Gelb
+      value: "Train_Gr\xFCn"
       objectReference: {fileID: 0}
     - target: {fileID: 3979162001047847712, guid: 65fed500cc1e9a449b3708d5bf4b0df3, type: 3}
       propertyPath: m_IsActive
@@ -473,9 +481,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4475234572527618164}
     m_Modifications:
+    - target: {fileID: 1994218103841876062, guid: 65fed500cc1e9a449b3708d5bf4b0df3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8bafa3383af75fd46863dd6ecbc0a1f3, type: 3}
     - target: {fileID: 3979162001047847712, guid: 65fed500cc1e9a449b3708d5bf4b0df3, type: 3}
       propertyPath: m_Name
-      value: Train_Gelb
+      value: Train_Schwarz
       objectReference: {fileID: 0}
     - target: {fileID: 3979162001047847712, guid: 65fed500cc1e9a449b3708d5bf4b0df3, type: 3}
       propertyPath: m_IsActive

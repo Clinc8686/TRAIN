@@ -250,7 +250,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 726234814}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -326,11 +326,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1208700126}
   - {fileID: 164563323}
-  - {fileID: 909920651}
-  - {fileID: 1840931676}
-  m_Father: {fileID: 974784945}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -919,6 +916,78 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 14.829409, y: -21.119839, z: -10.480461}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &699466302
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 699466304}
+  - component: {fileID: 699466303}
+  m_Layer: 0
+  m_Name: StartingSceneController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &699466303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 699466302}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63b61ffe827582844addd874104ace8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 213327631}
+  text:
+  - "Berlin, somewhere, sometime that's not yet day but not really night anymore
+    either and Budi wants nothing more than go get home. Maybe a D\xF6ner but too
+    late, already past his favourite place and you don't cheat on the guy who calls
+    you 'Chef, mit allem?' the way his guy did."
+  - Ears are still humming, the ringing almost gone but the rave was still in his
+    body. No words, just bass and around Budi the echo of his rave, the silence of
+    a subway station, the low sounds that belong to it. The silence of your way home
+  - The station is empty and the train is late, time enough for the rave to slowly
+    leave his body and thoughts about tomorrow pushing aside the idea of just getting
+    home and going to sleep.
+  - As you shake your pack of cigarettes and fine some still rattling inside, you
+    notice you're not entirely alone, a figure next to you on the platform waiting.
+    Budi takes an unconscious half-step away, patting his jacket for his lighter.
+  - When a small hands offers a lighter, Budi steps back, gladly taking the fire
+    and grunting something that could possibly be a thanks. "Hate when that happens.",
+    says a voice sounding even younger than the stature implied.
+  - Budi smokes in silence. No judging.
+  - After a moment of silence and smoking, the air shifts and a low wind heralds
+    the arrival of a subway. There's no ding-dong, no announcement as the figure
+    next to you chimes up again. "Can you come along for one station? I'm not supposed
+    to ride the subway alone." Budi hesitates a moment but as the train arrives he
+    thinks it's only fair, tit for tat, and gets on the train.
+  - The doors open and stepping onto the platform Budi is alone even before they
+    close again. There is no kid, just remnants of his cigarette and a subway station
+    that doesn't look familiar. Dit is nich Berlin, is it?
+  skipTextTransform: {fileID: 0}
+--- !u!4 &699466304
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 699466302}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1616,3 +1685,6 @@ SceneRoots:
   - {fileID: 1116739316}
   - {fileID: 201702194}
   - {fileID: 16246236}
+  - {fileID: 90057718}
+  - {fileID: 104508356}
+  - {fileID: 699466304}

@@ -653,6 +653,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!224 &707361691 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4542432209929134989, guid: 2163a235c743a114586e29ff2e48fe6f, type: 3}
+  m_PrefabInstance: {fileID: 1788622601}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &718109302
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1104,9 +1109,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2672263432301799810, guid: d3232536b998fab42973b0c5b10b234a, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1310883751}
+    - target: {fileID: 2672263432301799810, guid: d3232536b998fab42973b0c5b10b234a, type: 3}
+      propertyPath: interactionDistance
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2672263432301799810, guid: d3232536b998fab42973b0c5b10b234a, type: 3}
+      propertyPath: interactionSignTransform
+      value: 
+      objectReference: {fileID: 1316018901}
     - target: {fileID: 4258841154245098129, guid: d3232536b998fab42973b0c5b10b234a, type: 3}
       propertyPath: m_Name
       value: "M\xFClleimer"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4644425327782255641, guid: d3232536b998fab42973b0c5b10b234a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 4.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4644425327782255641, guid: d3232536b998fab42973b0c5b10b234a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 3.4
       objectReference: {fileID: 0}
     - target: {fileID: 5385445919753594414, guid: d3232536b998fab42973b0c5b10b234a, type: 3}
       propertyPath: m_LocalScale.x
@@ -1122,11 +1147,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5385445919753594414, guid: d3232536b998fab42973b0c5b10b234a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 29.1
+      value: 31.8
       objectReference: {fileID: 0}
     - target: {fileID: 5385445919753594414, guid: d3232536b998fab42973b0c5b10b234a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -31.5
+      value: -33.1
       objectReference: {fileID: 0}
     - target: {fileID: 5385445919753594414, guid: d3232536b998fab42973b0c5b10b234a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1180,6 +1205,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 707943a15480580498e7e566fd5f5414, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!224 &1316018901 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4644425327782255641, guid: d3232536b998fab42973b0c5b10b234a, type: 3}
+  m_PrefabInstance: {fileID: 1303309573}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1479184612
 GameObject:
   m_ObjectHideFlags: 0
@@ -1367,6 +1397,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3656466430849892567, guid: 2163a235c743a114586e29ff2e48fe6f, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1310883751}
+    - target: {fileID: 3656466430849892567, guid: 2163a235c743a114586e29ff2e48fe6f, type: 3}
+      propertyPath: interactionDistance
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3656466430849892567, guid: 2163a235c743a114586e29ff2e48fe6f, type: 3}
+      propertyPath: interactionSignTransform
+      value: 
+      objectReference: {fileID: 707361691}
+    - target: {fileID: 4542432209929134989, guid: 2163a235c743a114586e29ff2e48fe6f, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 5.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4542432209929134989, guid: 2163a235c743a114586e29ff2e48fe6f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 4.4
+      objectReference: {fileID: 0}
     - target: {fileID: 8117334408396252054, guid: 2163a235c743a114586e29ff2e48fe6f, type: 3}
       propertyPath: m_Name
       value: Automat
@@ -1440,21 +1490,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2672263432301799810, guid: d3232536b998fab42973b0c5b10b234a, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1310883751}
     - target: {fileID: 4258841154245098129, guid: d3232536b998fab42973b0c5b10b234a, type: 3}
       propertyPath: m_Name
       value: "M\xFClleimer (1)"
-      objectReference: {fileID: 0}
-    - target: {fileID: 5385445919753594414, guid: d3232536b998fab42973b0c5b10b234a, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.444354
-      objectReference: {fileID: 0}
-    - target: {fileID: 5385445919753594414, guid: d3232536b998fab42973b0c5b10b234a, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.444354
-      objectReference: {fileID: 0}
-    - target: {fileID: 5385445919753594414, guid: d3232536b998fab42973b0c5b10b234a, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.444354
       objectReference: {fileID: 0}
     - target: {fileID: 5385445919753594414, guid: d3232536b998fab42973b0c5b10b234a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1495,10 +1537,6 @@ PrefabInstance:
     - target: {fileID: 5385445919753594414, guid: d3232536b998fab42973b0c5b10b234a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5385445919753594414, guid: d3232536b998fab42973b0c5b10b234a, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

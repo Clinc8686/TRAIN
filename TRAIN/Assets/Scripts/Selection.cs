@@ -61,7 +61,7 @@ public class Selection : MonoBehaviour, IPointerClickHandler, IPointerEnterHandl
 
     private bool IsInRange()
     {
-        return _collectable.distanceToPlayer < _collectable.interactableRadius;
+        return _collectable.GetDistanceToPlayer() < _collectable.interactableRadius;
     }
 
     private void Update()

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28f52f252cb54024b921b6059a47cab2, type: 3}
   m_Name: Sonne
   m_EditorClassIdentifier: 
-  collectableSprite: {fileID: 21300000, guid: 226fe0b5ada0deb4e99f69b8b3a25fd7, type: 3}
+  collectableSprite: {fileID: 21300000, guid: 7b47b0fa993337b4bbf86a3aa6bb6d9c, type: 3}
   collectableName: Sonne

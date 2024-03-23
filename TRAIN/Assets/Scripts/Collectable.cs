@@ -7,21 +7,27 @@ public class Collectable : MonoBehaviour
     [SerializeField] private CollectableSO collectableSO;
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private Player player;
-    public float distanceToPlayer;
-
+    [SerializeField] private Color highlightedColor;
+    [SerializeField] private Color normalColor;
+    
+    private float _distanceToPlayer;
     private bool _playerIsInRangeToCollect;
-
-    private void Start()
-    {
-        if (interactableRadius <= 0)
-        {
-            Debug.LogWarning("interactableRadius not large enough");  
-        }
-    }
-
     private void Update()
     {
-        distanceToPlayer = Vector2.Distance(transform.position, player.transform.position);
+        _distanceToPlayer = Vector2.Distance(transform.position, player.transform.position);
+
+        if (_distanceToPlayer <= interactableRadius) _playerIsInRangeToCollect = true;
+        else _playerIsInRangeToCollect = false;
+
+        if(_playerIsInRangeToCollect)
+        {
+            Debug.Log("Hier");
+            spriteRenderer.material.color = highlightedColor;
+        }
+        else
+        {
+            spriteRenderer.material.color = normalColor;
+        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -34,4 +40,5 @@ public class Collectable : MonoBehaviour
         }
     }
     public bool IsPlayerInRange() => _playerIsInRangeToCollect;
+    public float GetDistanceToPlayer() => _distanceToPlayer;
 }

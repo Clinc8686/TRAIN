@@ -968,7 +968,7 @@ MonoBehaviour:
     mulch and vegetation. Stepping onto the plattform looks like stepping into an
     underground greenhouse. There are several seed beds, a scarecrow, bags and crates
     full of crops.
-  skipTextTransform: {fileID: 1415286447}
+  skipTextTransform: {fileID: 0}
 --- !u!4 &699466304
 Transform:
   m_ObjectHideFlags: 0
@@ -1275,11 +1275,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fbef2cac253c4b749b757be795efeed2, type: 3}
---- !u!224 &1415286447 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 1297282019136853021, guid: 0afd9f501e0980e4aa253077323aa688, type: 3}
-  m_PrefabInstance: {fileID: 1552370594}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1479184612
 GameObject:
   m_ObjectHideFlags: 0
@@ -1414,6 +1409,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4881088255379042567, guid: 0afd9f501e0980e4aa253077323aa688, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4914265055281054031, guid: 0afd9f501e0980e4aa253077323aa688, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

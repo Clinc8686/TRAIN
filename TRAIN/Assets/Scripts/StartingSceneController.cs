@@ -51,7 +51,7 @@ public class StartingSceneController : MonoBehaviour
     }
     private void ResetState()
     {
-        Destroy(skipTextTransform.gameObject);
+        if(skipTextTransform != null) Destroy(skipTextTransform.gameObject);
         DialogController.Instance.ResetWritingStateAndDeactivateUI();
         player.enabled = true;
         _hasFinishedJob = true;

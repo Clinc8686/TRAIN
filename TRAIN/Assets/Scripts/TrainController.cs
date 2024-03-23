@@ -10,6 +10,7 @@ public class TrainController : MonoBehaviour
     private int defaultLayer;
     private int trainLayer;
     private bool trainContainsPlayer = false;
+    [SerializeField] private bool LastTrain;
     
     public SceneLoader.Scenes nextScene;
     private void Awake()
@@ -23,7 +24,21 @@ public class TrainController : MonoBehaviour
         CheckIfTrainIsMoving();
         if (!trainIsMoving)
         {
-            SetGameLayerRecursive(transform.parent.transform.parent.gameObject, defaultLayer);
+            if (LastTrain)
+            {
+                if (InventoryController.Instance._hasTicket && InventoryController.Instance._hasTrain)
+                {
+                    SetGameLayerRecursive(transform.parent.transform.parent.gameObject, defaultLayer);
+                }
+                else
+                {
+                    SetGameLayerRecursive(transform.parent.transform.parent.gameObject, trainLayer);
+                }
+            }
+            else
+            {
+                SetGameLayerRecursive(transform.parent.transform.parent.gameObject, defaultLayer);
+            }
         }
         else
         {
@@ -37,13 +52,19 @@ public class TrainController : MonoBehaviour
         {
             if (!trainIsMoving)
             {
-                //TODO: CHeck InventoryController
-                /*if (InventoryController.Instance.HasAllInventoryElements())
+                if (LastTrain && InventoryController.Instance.HasAllInventoryElements())
                 {
-                    
-                }*/
-                player.transform.GetChild(0).gameObject.SetActive(false);
-                trainContainsPlayer = true;
+                    if (InventoryController.Instance.HasAllInventoryElements())
+                    {
+                        player.transform.GetChild(0).gameObject.SetActive(false);
+                        trainContainsPlayer = true;
+                    }
+                }
+                else
+                {
+                    player.transform.GetChild(0).gameObject.SetActive(false);
+                    trainContainsPlayer = true;
+                }
             }
         }
     }

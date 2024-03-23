@@ -26,6 +26,8 @@ public class Vogelscheuche : MonoBehaviour, IInteractable
     {
         if (_jobIsDone) return;
 
+        if (!InventoryController.Instance.HasSun()) return;
+
         float distanceToPlayer = Vector2.Distance(transform.position, player.transform.position);
         if (distanceToPlayer <= interactionDistance)
         {
@@ -41,11 +43,13 @@ public class Vogelscheuche : MonoBehaviour, IInteractable
     {
         if (_jobIsDone) return;
 
+        if (!InventoryController.Instance.HasSun()) return;
+
         float distanceToPlayer = Vector3.Distance(player.transform.position, transform.position);
         if (distanceToPlayer > interactionDistance) return;
 
         spriteRenderer.sprite = sprite;
-        PlayerPrefs.SetInt("Vogelscheuche", 1);
+        PlayerPrefs.SetInt("Vogelscheuche", 0);
         _jobIsDone = true;
     }
 }

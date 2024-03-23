@@ -40,6 +40,11 @@ public class StationManager : MonoBehaviour
         timer += Time.deltaTime;
         if (timer > 10)
         {
+            if (InventoryController.Instance == null)
+            {
+                Debug.LogError("No Inventory Controller in Secene found!");
+                return;
+            }
             if (LastTrain != null && InventoryController.Instance._hasTicket && InventoryController.Instance._hasTrain)
             {
                 CallOnlyLastTrain();

@@ -33,16 +33,16 @@ public class TrainController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.TryGetComponent<Player>(out Player player) && player.transform.GetChild(0).TryGetComponent<SpriteRenderer>(out SpriteRenderer spriteRenderer))
+        if (col.gameObject.TryGetComponent<Player>(out Player player) && player.transform.GetChild(0))
         {
             if (!trainIsMoving)
             {
                 //TODO: CHeck InventoryController
-                if (InventoryController.Instance.HasAllInventoryElements())
+                /*if (InventoryController.Instance.HasAllInventoryElements())
                 {
                     
-                }
-                spriteRenderer.enabled = false;
+                }*/
+                player.transform.GetChild(0).gameObject.SetActive(false);
                 trainContainsPlayer = true;
             }
         }
@@ -50,11 +50,11 @@ public class TrainController : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D col)
     {
-        if (col.gameObject.TryGetComponent<Player>(out Player player) && player.transform.GetChild(0).TryGetComponent<SpriteRenderer>(out SpriteRenderer spriteRenderer))
+        if (col.gameObject.TryGetComponent<Player>(out Player player) && player.transform.GetChild(0))
         {
             if (!trainIsMoving)
             {
-                spriteRenderer.enabled = true;
+                player.transform.GetChild(0).gameObject.SetActive(true);
                 trainContainsPlayer = false;
             }
             else

@@ -28,7 +28,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4475234572527618164}
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -10
-  m_Sprite: {fileID: 21300000, guid: 1654055ed0592a04f8537a87f83f8e06, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 13cd7dda9323381499d7d4eae37953ab, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -121,7 +121,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 43.2, y: 21.6}
+    oldSize: {x: 86.4, y: 43.2}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -129,30 +129,20 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 21.850733, y: -10.991501}
-      - {x: 21.884197, y: -9.927554}
-      - {x: 21.782368, y: -5.3957477}
-      - {x: 18.887411, y: -3.2180738}
-      - {x: 19.269564, y: -0.52813816}
-      - {x: 19.33106, y: 1.1234329}
-      - {x: 14.76926, y: 3.956893}
-      - {x: 10.430609, y: 1.3665395}
-      - {x: -3.7655778, y: 9.753509}
-      - {x: -8.135382, y: 6.878989}
-      - {x: -14.094875, y: 3.0999508}
-      - {x: -15.091236, y: 3.7398014}
-      - {x: -18.523853, y: 5.931521}
-      - {x: -21.450512, y: 8.010101}
-      - {x: -21.95154, y: 3.9065757}
-      - {x: -17.318228, y: 0.94418955}
-      - {x: -8.838907, y: -3.2019925}
-      - {x: -6.523124, y: -5.364256}
-      - {x: -3.7796004, y: -6.289568}
-      - {x: -0.9118576, y: -7.2031183}
-      - {x: 1.2839212, y: -8.55083}
-      - {x: 3.8472776, y: -9.636324}
-      - {x: 8.121452, y: -10.644142}
-      - {x: 16.368677, y: -10.816363}
+    - - {x: 27.099125, y: 7.416478}
+      - {x: 22.461687, y: 4.6336155}
+      - {x: 20.85162, y: 3.5734906}
+      - {x: 19.975601, y: 3.9359784}
+      - {x: 15.765371, y: 6.300681}
+      - {x: -6.4609337, y: 19.831797}
+      - {x: -29.622469, y: 6.264065}
+      - {x: -42.806526, y: 13.818089}
+      - {x: -42.760906, y: 7.247875}
+      - {x: -0.18262196, y: -18.051315}
+      - {x: 5.266987, y: -21.48766}
+      - {x: 26.903938, y: -21.47736}
+      - {x: 26.94122, y: -9.584596}
+      - {x: 26.908014, y: -4.0053473}
   m_UseDelaunayMesh: 0
 --- !u!1 &5023198054770635720
 GameObject:
@@ -208,10 +198,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4475234572527618164}
     m_Modifications:
-    - target: {fileID: 1994218103841876062, guid: 65fed500cc1e9a449b3708d5bf4b0df3, type: 3}
-      propertyPath: m_SortingOrder
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 3979162001047847712, guid: 65fed500cc1e9a449b3708d5bf4b0df3, type: 3}
       propertyPath: m_Name
       value: Train_Gelb

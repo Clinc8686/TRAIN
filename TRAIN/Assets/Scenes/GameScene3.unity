@@ -451,10 +451,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Vogelscheuche
       objectReference: {fileID: 0}
-    - target: {fileID: 6671830692471418915, guid: dc16679e39cd3d845acf9a2619efd041, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

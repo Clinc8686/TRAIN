@@ -506,6 +506,7 @@ MonoBehaviour:
   interactionDistance: 10
   spriteRenderer: {fileID: 8692963269613055249}
   sprite: {fileID: 21300000, guid: 8c412fabd7440b1459c880ed6f90d279, type: 3}
+  collectableSO: {fileID: 11400000, guid: 39f313ec6bbdf0441953498faf45c96e, type: 2}
 --- !u!1 &8923839651347675580
 GameObject:
   m_ObjectHideFlags: 0

@@ -452,7 +452,7 @@ GameObject:
   - component: {fileID: 6887780127551795089}
   - component: {fileID: -1794057025464215718}
   - component: {fileID: 7531488192530306124}
-  - component: {fileID: 660310755138538509}
+  - component: {fileID: 745153440915861561}
   m_Layer: 6
   m_Name: "G\xE4rtner"
   m_TagString: Untagged
@@ -535,7 +535,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 6601769211562235619}
---- !u!114 &660310755138538509
+--- !u!114 &745153440915861561
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -544,11 +544,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 8181792806164854341}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2bac07e72f6cafb4fb90857db517eb49, type: 3}
+  m_Script: {fileID: 11500000, guid: 0cbe0d21637648929560db5f244137df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  interactionSignTransform: {fileID: 7482527656420151346}
-  interactionPointTransform: {fileID: 0}
-  dialogTextInput: Kannst du mir helfen, uwu FACE
+  interactionSignTransform: {fileID: 5582963616276305618}
   interactionDistance: 10
+  text:
+  - The little plant person barely stops working as Budi stands there watching, trying
+    to get its attention. A couple of times it puts down the comically large shovel
+    to genkidama some photosynthesis, which looks to be a struggling affair, before
+    it continues working.
+  - During such a loading phase Budi looks at the seed bed, wondering what the little
+    creature is working on and instantly feels at home. The leaves, the smell, one
+    deep breath and he feels the feels. This little creature here is tending a fine
+    crop of Ganja, the green bliss, the maker of friends and tormentor of governments.
+  - At long last the creature acknowledges Budi, maybe due to the hungry look in
+    his eyes. "No good wanting, there is not enough light to make the little ones
+    grow anymore. Not since the rooflights have grown over for good." Budi feels
+    the same sadness in the creatures voice but isn't entirely sure they are for
+    the same reason exactly.
+  - '"If things continue like this, with the light waning, soon there''ll only be
+    glowing mushrooms growing here... and who wants that?"'
+  skipTextTransform: {fileID: 0}

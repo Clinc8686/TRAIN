@@ -123,6 +123,7 @@ public class Player : MonoBehaviour
 
         if (hit.collider.gameObject.TryGetComponent(out IInteractable interactable))
         {
+            Debug.Log("Hit interactable!");
             interactable.Interact();
         }
         else if (hit.collider.TryGetComponent<Collectable>(out Collectable collectable))

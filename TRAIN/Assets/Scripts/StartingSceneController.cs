@@ -13,6 +13,8 @@ public class StartingSceneController : MonoBehaviour
     //private int _wasAlreadyOnIntroScene;
     private void Start()
     {
+        Debug.Log("Aktuell " + text[_index]);
+
         //_wasAlreadyOnIntroScene = PlayerPrefs.GetInt("Intro Scene");
 
         //if(_wasAlreadyOnIntroScene == 1)

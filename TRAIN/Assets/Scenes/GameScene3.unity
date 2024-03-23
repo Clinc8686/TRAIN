@@ -845,6 +845,11 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_MaxRayIntersections: 0
+--- !u!224 &620465339 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 7482527656420151346, guid: e4b8fc169e8572c4d95d553f5a0d96ea, type: 3}
+  m_PrefabInstance: {fileID: 1116739316}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &667026745
 GameObject:
   m_ObjectHideFlags: 0
@@ -1109,10 +1114,6 @@ MonoBehaviour:
     mulch and vegetation. Stepping onto the plattform looks like stepping into an
     underground greenhouse. There are several seed beds, a scarecrow, bags and crates
     full of crops.
-  - The doors open and Budi gets hit by the humidity of the air, the smell of turned
-    mulch and vegetation. Stepping onto the plattform looks like stepping into an
-    underground greenhouse. There are several seed beds, a scarecrow, bags and crates
-    full of crops.
   skipTextTransform: {fileID: 0}
 --- !u!4 &699466304
 Transform:
@@ -1307,6 +1308,18 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 213327631}
+    - target: {fileID: 745153440915861561, guid: e4b8fc169e8572c4d95d553f5a0d96ea, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 213327631}
+    - target: {fileID: 745153440915861561, guid: e4b8fc169e8572c4d95d553f5a0d96ea, type: 3}
+      propertyPath: interactionSignTransform
+      value: 
+      objectReference: {fileID: 620465339}
+    - target: {fileID: 3341188249804174310, guid: e4b8fc169e8572c4d95d553f5a0d96ea, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4197306161544253781, guid: e4b8fc169e8572c4d95d553f5a0d96ea, type: 3}
       propertyPath: m_SortingOrder
       value: 32767

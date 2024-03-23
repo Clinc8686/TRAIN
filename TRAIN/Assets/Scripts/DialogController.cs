@@ -56,6 +56,7 @@ public class DialogController : MonoBehaviour
     {
         for (int i = 0; i < _dialog.Length; i++)
         {
+            //Debug.Log("WriteTextDialog " + _dialog[i]);
             yield return new WaitForSeconds(textTime);
             dialogTextField.text += _dialog[i];
         }

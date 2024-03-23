@@ -55,7 +55,9 @@ public class StationManager : MonoBehaviour
     private void CallOnlyLastTrain()
     {
         DisableAllTrains();
+        LastTrain.TryGetComponent(out Animator animator);
         LastTrain.SetActive(true);
+        animator.Update(0f);
     }
 
     public void OnCallTrainCLicked(int trainNumber)
@@ -82,5 +84,8 @@ public class StationManager : MonoBehaviour
             train.TryGetComponent(out Animator animator);
             animator.Update(0f);
         }
+        LastTrain.SetActive(false);
+        LastTrain.TryGetComponent(out Animator lastTrainAnimator);
+        lastTrainAnimator.Update(0f);
     }
 }

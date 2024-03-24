@@ -89,8 +89,12 @@ public class StationManager : MonoBehaviour
             train.TryGetComponent(out Animator animator);
             animator.Update(0f);
         }
-        LastTrain.SetActive(false);
-        LastTrain.TryGetComponent(out Animator lastTrainAnimator);
-        lastTrainAnimator.Update(0f);
+
+        if (LastTrain != null)
+        {
+            LastTrain.SetActive(false);
+            LastTrain.TryGetComponent(out Animator lastTrainAnimator);
+            lastTrainAnimator.Update(0f);
+        }
     }
 }

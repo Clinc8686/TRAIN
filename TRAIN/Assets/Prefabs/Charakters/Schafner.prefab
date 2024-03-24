@@ -538,3 +538,27 @@ MonoBehaviour:
   dialogTextInput: 
   interactionDistance: 10
   collectableSO: {fileID: 11400000, guid: de38cd7889fdbed458e98771395e5e83, type: 2}
+  text:
+  - The portly Conductor works the platform and seems to have ignored Budi completely
+    so far, seemingly wanting to ignore him some more but when at a second "Excuse
+    me?" he finally turns around.
+  - Asking about the U2 going to Alexanderplatz doesn't work as well as Budi expected
+    and the man raises his raised brow even further and eyes Budi up and down.
+  - '"Ticket please." Is the only thing you get in response as the man looks at Budi
+    with some reproach.'
+  - You don't really get what that has anything to do with your question and phone
+    in hand you tell the man. "I've got the Deutschlandticket."
+  - '"And I got rheuma since last night. With a ticket like that I don''t see you
+    getting anyplace any time soon."'
+  - The man turns away from Budi and leaves him staring at a broad back not knowing
+    what to say.
+  textAfterItem:
+  - 
+  - 
+  - 
+  - 
+  textwithBubatz:
+  - 
+  - 
+  - 
+  - 

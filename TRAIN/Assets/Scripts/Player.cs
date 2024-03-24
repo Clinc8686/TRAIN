@@ -119,7 +119,6 @@ public class Player : MonoBehaviour
         if (hit.collider == null) return;
         if (hit.collider.TryGetComponent<NotInteractable>(out NotInteractable notInteractable))
         {
-            Debug.Log("Hey");
             return;
         }
 

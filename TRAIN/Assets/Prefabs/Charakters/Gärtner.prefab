@@ -452,7 +452,7 @@ GameObject:
   - component: {fileID: 6887780127551795089}
   - component: {fileID: -1794057025464215718}
   - component: {fileID: 7531488192530306124}
-  - component: {fileID: 745153440915861561}
+  - component: {fileID: 384211667415155569}
   m_Layer: 6
   m_Name: "G\xE4rtner"
   m_TagString: Untagged
@@ -535,7 +535,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 6601769211562235619}
---- !u!114 &745153440915861561
+--- !u!114 &384211667415155569
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -544,26 +544,38 @@ MonoBehaviour:
   m_GameObject: {fileID: 8181792806164854341}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cbe0d21637648929560db5f244137df, type: 3}
+  m_Script: {fileID: 11500000, guid: 2bac07e72f6cafb4fb90857db517eb49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  interactionSignTransform: {fileID: 5582963616276305618}
-  interactionDistance: 10
-  text:
-  - The little plant person barely stops working as Budi stands there watching, trying
+  interactionSignTransform: {fileID: 0}
+  onSceneStartingDialog: []
+  dialogWithoutItem:
+  - The little Plant person barely stops working as Budi stands there watching, trying
     to get its attention. A couple of times it puts down the comically large shovel
     to genkidama some photosynthesis, which looks to be a struggling affair, before
     it continues working.
   - During such a loading phase Budi looks at the seed bed, wondering what the little
     creature is working on and instantly feels at home. The leaves, the smell, one
-    deep breath and he feels the feels. This little creature here is tending a fine
+    deep breath and he feels the feels. This little Plant here is tending a fine
     crop of Ganja, the green bliss, the maker of friends and tormentor of governments.
-  - At long last the creature acknowledges Budi, maybe due to the hungry look in
-    his eyes. "No good wanting, there is not enough light to make the little ones
-    grow anymore. Not since the rooflights have grown over for good." Budi feels
-    the same sadness in the creatures voice but isn't entirely sure they are for
-    the same reason exactly.
-  - '"If things continue like this, with the light waning, soon there''ll only be
+  - At long last the Plant acknowledges Budi, maybe due to the hungry look in his
+    eyes. "No good wanting, there is not enough light to make the little ones grow
+    anymore. Not since the rooflights have grown over for good." Budi feels the same
+    sadness in the creatures voice but isn't entirely sure they are for the same
+    reason exactly.
+  - ' "If things continue like this, with the light waning, soon there''ll only be
     glowing mushrooms growing here... and who wants that?"'
-  skipTextTransform: {fileID: 0}
+  dialogWitItem:
+  - 'The little Plant cheers as you drop your piece of the Sun, lighting up the entire
+    place with a warm glow, watching all the plants facing their new Sun. '
+  - '"How lovely! That should do the trick and help all my lovelies grow! I really,
+    really don''t like mushrooms." The Plant pats your arm amiably and gets back
+    to work with new vigor.'
+  - Pointing at the precious, delicious looking Bubatz-Plants Budi suddenly faces
+    a stern face and firm rebuke. "They are not ready and it would be rude to deny
+    them their time in this new Sun. Sorry."
+  - The regret doesn't really feel believable but the Plant doesn't budge on the
+    topic. A job well done really fells like a letdown if all you get for it is a
+    bit of applause.
+  interactionDistance: 10
+  itemToCollect: 1

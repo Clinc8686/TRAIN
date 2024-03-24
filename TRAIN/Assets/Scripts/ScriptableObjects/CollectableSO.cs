@@ -6,5 +6,11 @@ using UnityEngine;
 public class CollectableSO : ScriptableObject
 {
     public Sprite collectableSprite;
-    public string collectableName;
+    public InventoryController.CollectableItem collectableItem;
+
+    public CollectableSO(Sprite sprite, InventoryController.CollectableItem item)
+    {
+        this.collectableItem = item;
+        this.collectableSprite = sprite;
+    }
 }

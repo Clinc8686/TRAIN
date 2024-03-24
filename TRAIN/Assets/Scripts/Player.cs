@@ -26,9 +26,16 @@ public class Player : MonoBehaviour
     private SpriteRenderer _spriteRenderer;
     private int layerMaskWithoutPlayerTrain;
     private bool firstStep = true;
-
+    public static Player Instance { get; private set; }
     private void Awake()
     {
+        if (Instance != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        Instance = this;
+        
         _spriteRenderer = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
 

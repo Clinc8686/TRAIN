@@ -29,7 +29,6 @@ public class Vogelscheuche : MonoBehaviour, IInteractable
 
         if (!InventoryController.Instance.HasSun()) return;
 
-        Debug.Log("Hier");
 
         float distanceToPlayer = Vector2.Distance(transform.position, player.transform.position);
         if (distanceToPlayer <= interactionDistance)

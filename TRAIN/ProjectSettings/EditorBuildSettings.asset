@@ -18,7 +18,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Core_Station.unity
     guid: f0e3aae3ff40cd84cbcb6b2a218092e3
   - enabled: 1
-    path: Assets/Scenes/Overgrown.unity
+    path: Assets/Scenes/Overgrown_Station.unity
     guid: da3f6c66a7370674994b417b0f264a6a
   - enabled: 1
     path: Assets/Scenes/Noir_Station.unity

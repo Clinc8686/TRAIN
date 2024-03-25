@@ -199,6 +199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee054ee899593b24bbc91822765ea7e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LastTrain: {fileID: 0}
 --- !u!1 &5319168119822495171
 GameObject:
   m_ObjectHideFlags: 0
@@ -483,7 +484,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8146725474468899796, guid: 65fed500cc1e9a449b3708d5bf4b0df3, type: 3}
       propertyPath: nextScene
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8360415839015876051, guid: 65fed500cc1e9a449b3708d5bf4b0df3, type: 3}
       propertyPath: m_LocalScale.x
@@ -559,14 +560,14 @@ PrefabInstance:
     - target: {fileID: 1994218103841876062, guid: 65fed500cc1e9a449b3708d5bf4b0df3, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: f389835526202f94c9073e5411d0d5e9, type: 3}
+      objectReference: {fileID: 21300000, guid: c739f91c27210124dbefe431c88bec5c, type: 3}
     - target: {fileID: 1994218103841876062, guid: 65fed500cc1e9a449b3708d5bf4b0df3, type: 3}
       propertyPath: m_SortingOrder
       value: -9
       objectReference: {fileID: 0}
     - target: {fileID: 3979162001047847712, guid: 65fed500cc1e9a449b3708d5bf4b0df3, type: 3}
       propertyPath: m_Name
-      value: Train_Schwarz
+      value: Train_Gelb
       objectReference: {fileID: 0}
     - target: {fileID: 3979162001047847712, guid: 65fed500cc1e9a449b3708d5bf4b0df3, type: 3}
       propertyPath: m_IsActive
@@ -777,7 +778,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8146725474468899796, guid: 65fed500cc1e9a449b3708d5bf4b0df3, type: 3}
       propertyPath: nextScene
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8360415839015876051, guid: 65fed500cc1e9a449b3708d5bf4b0df3, type: 3}
       propertyPath: m_LocalScale.x

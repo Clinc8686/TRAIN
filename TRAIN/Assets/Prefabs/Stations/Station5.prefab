@@ -268,6 +268,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee054ee899593b24bbc91822765ea7e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LastTrain: {fileID: 0}
 --- !u!1 &7125681399507719802
 GameObject:
   m_ObjectHideFlags: 0
@@ -312,14 +313,14 @@ PrefabInstance:
     - target: {fileID: 1994218103841876062, guid: 65fed500cc1e9a449b3708d5bf4b0df3, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: c340b7e882bac5245be303d77c48025b, type: 3}
+      objectReference: {fileID: 21300000, guid: f389835526202f94c9073e5411d0d5e9, type: 3}
     - target: {fileID: 1994218103841876062, guid: 65fed500cc1e9a449b3708d5bf4b0df3, type: 3}
       propertyPath: m_SortingOrder
       value: -9
       objectReference: {fileID: 0}
     - target: {fileID: 3979162001047847712, guid: 65fed500cc1e9a449b3708d5bf4b0df3, type: 3}
       propertyPath: m_Name
-      value: Train_Rot
+      value: Train_Schwarz
       objectReference: {fileID: 0}
     - target: {fileID: 3979162001047847712, guid: 65fed500cc1e9a449b3708d5bf4b0df3, type: 3}
       propertyPath: m_IsActive
@@ -530,7 +531,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8146725474468899796, guid: 65fed500cc1e9a449b3708d5bf4b0df3, type: 3}
       propertyPath: nextScene
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8360415839015876051, guid: 65fed500cc1e9a449b3708d5bf4b0df3, type: 3}
       propertyPath: m_LocalScale.x

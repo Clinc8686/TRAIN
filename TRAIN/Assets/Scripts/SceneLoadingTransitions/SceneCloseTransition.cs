@@ -6,6 +6,6 @@ public class SceneCloseTransition : MonoBehaviour
 {
     public void TransitionIsFinished()
     {
-        SceneLoader.Load(SceneLoader.Scenes.GameScene1);
+        SceneLoader.Load(SceneLoader.Scenes.Start_Scene);
     }
 }

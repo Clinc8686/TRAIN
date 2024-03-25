@@ -311,6 +311,8 @@ MonoBehaviour:
   - {fileID: 48803571}
   - {fileID: 134357264}
   - {fileID: 731770374}
+  collectableItems: 
+  collectableSprites: []
   _hasSun: 0
   _hasBubads: 0
   _hasTicket: 0
@@ -1532,11 +1534,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6999710518403286216, guid: e6b4e560db17cc6408bbe59844131a97, type: 3}
       propertyPath: nextScene
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7973031113741902041, guid: e6b4e560db17cc6408bbe59844131a97, type: 3}
       propertyPath: nextScene
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8242069280955355005, guid: e6b4e560db17cc6408bbe59844131a97, type: 3}
       propertyPath: m_LocalPosition.x

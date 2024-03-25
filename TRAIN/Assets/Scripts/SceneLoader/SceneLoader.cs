@@ -10,11 +10,11 @@ public static class SceneLoader
     {
         HomeMenuScene,
         LoadingScene,
-        GameScene1,
-        GameScene2,
-        GameScene3,
-        GameScene4,
-        GameScene5,
+        Start_Scene,
+        Core_Station,
+        Noir_Station,
+        Overgrown_Station,
+        Astral_Station,
         EndScene
     }
     private class SceneLoaderMonoBehaviour : MonoBehaviour {}

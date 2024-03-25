@@ -7,11 +7,11 @@ public class Interactable : MonoBehaviour, IInteractable
     
     [Tooltip("Dialog to be displayed at the beginning of the scene.")] 
     [SerializeField] private string[] onSceneStartingDialog;
-    [Tooltip("Dialog to be displayed if the player arrives without the required item.")] 
-    [SerializeField] private string[] dialogWithoutItem;
+    [Tooltip("Dialog to be displayed when the player arrives the character for the first time.")] 
+    [SerializeField] private string[] firstContactDialog;
+    [Tooltip("Dialog to be displayed when the player arrives the character repeatedly.")] 
+    [SerializeField] private string[] returningDialog;
     [Tooltip("Dialog to be displayed when the player arrives with the required item.")] 
-    [SerializeField] private string[] dialogWithItem;
-    [Tooltip("Dialog to be displayed when the player receives a new item.")] 
     [SerializeField] private string[] collectDialog;
     [Tooltip("Distance at which interaction is possible.")] 
     [SerializeField] private float interactionDistance = 10f;
@@ -19,9 +19,9 @@ public class Interactable : MonoBehaviour, IInteractable
     [SerializeField] private InventoryController.CollectableItem itemToCollect;
     [Tooltip("Item that the character gives to the player.")] 
     [SerializeField] private InventoryController.CollectableItem itemToReceive;
-    [Tooltip("Look without the required item")] 
+    [Tooltip("Character look without the required item")] 
     [SerializeField] private Sprite _spriteWithoutItem;
-    [Tooltip("Look with the required item")] 
+    [Tooltip("Character look with the required item")] 
     [SerializeField] private Sprite _spriteWithItem;
 
     private Player _player;
@@ -33,6 +33,7 @@ public class Interactable : MonoBehaviour, IInteractable
         _player = Player.Instance;
         _inventoryController = InventoryController.Instance;
         _spriteRenderer = GetComponentInChild<SpriteRenderer>();
+        PlayerPrefs.SetInt("Conductor", 0);
     }
 
     private void Start()
@@ -41,7 +42,12 @@ public class Interactable : MonoBehaviour, IInteractable
         {
             DialogController.Instance.WriteText(onSceneStartingDialog, _player);
         }
-        
+
+        if (itemToCollect == InventoryController.CollectableItem.Default)
+        {
+            Debug.LogWarning("No item to collect has been set for " + gameObject.name);
+        }
+
         CheckSprite();
     }
 
@@ -76,48 +82,55 @@ public class Interactable : MonoBehaviour, IInteractable
     {
         float distanceToPlayer = Vector3.Distance(_player.transform.position, transform.position);
         if (distanceToPlayer > interactionDistance) return;
-
-        CheckCollectDialog();
-        CheckItemDialog();
+        
+        Dialog();
         CheckSprite();
     }
 
-    //Method displays dialog if the player gets new item from the character
-    private void CheckCollectDialog()
+    //Checks player inventory for the required item and if the player has interacted with the character before
+    private void Dialog()
     {
-        if (itemToReceive != InventoryController.CollectableItem.Default && _inventoryController.PlayerHasItem(itemToReceive) != true)
+        if (PlayerPrefs.GetInt("Conductor") == 0)
         {
-            if (collectDialog != null)
+            //Displays dialog if the player has not yet interacted with the character
+            WriteDialog(firstContactDialog);
+            PlayerPrefs.SetInt("Conductor", 1);
+        }
+        else
+        {
+            if (itemToCollect != InventoryController.CollectableItem.Default)
             {
-                if (DialogController.Instance.IsWriting()) return;
-                DialogController.Instance.ResetIsWritingState();
-                DialogController.Instance.WriteText(collectDialog, _player);
-                //InventoryController.Instance.AddNewElementToInventory(collectableSO);
-                InventoryController.Instance.AddNewElementToInventory(itemToReceive);
+                if (_inventoryController.PlayerHasItem(itemToCollect))
+                {
+                    //Displays dialog if the player has the required item
+                    WriteDialog(collectDialog);
+                    if (itemToReceive != InventoryController.CollectableItem.Default)
+                    {
+                        //Player receives item
+                        InventoryController.Instance.AddNewElementToInventory(itemToReceive);
+                    }
+                }
+                else
+                {
+                    //Displays dialog if the player does not have the required item
+                    WriteDialog(returningDialog);
+                }
+            }
+            else
+            {
+                //Displays default returning dialog
+                WriteDialog(returningDialog);
             }
         }
     }
 
-    //Method displays dialog depending on whether the player has the required item
-    private void CheckItemDialog()
+    private void WriteDialog(String[] text)
     {
-        if (itemToCollect != InventoryController.CollectableItem.Default)
-        {
-            if (_inventoryController.PlayerHasItem(itemToCollect))
-            {
-                if (DialogController.Instance.IsWriting()) return;
-                DialogController.Instance.ResetIsWritingState();
-                DialogController.Instance.WriteText(dialogWithItem, _player);
-            }
-        }
-        else
-        {
-            if (DialogController.Instance.IsWriting()) return;
-            DialogController.Instance.ResetIsWritingState();
-            DialogController.Instance.WriteText(dialogWithoutItem, _player);
-        }
+        if (DialogController.Instance.IsWriting()) return;
+        DialogController.Instance.ResetIsWritingState();
+        DialogController.Instance.WriteText(collectDialog, _player);
     }
-    
+
     //Method changes the sprite depending on whether the player has the required item
     private void CheckSprite()
     {

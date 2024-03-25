@@ -452,6 +452,7 @@ GameObject:
   - component: {fileID: 1633770441766930781}
   - component: {fileID: 3511800157420516406}
   - component: {fileID: 1883898212695258633}
+  - component: {fileID: 3442112935239758276}
   m_Layer: 6
   m_Name: Schafner
   m_TagString: Untagged
@@ -528,7 +529,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5768337924701385131}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1c8976ce9fd4e50418fbadd49ba55692, type: 3}
   m_Name: 
@@ -562,3 +563,60 @@ MonoBehaviour:
   - 
   - 
   - 
+--- !u!114 &3442112935239758276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5768337924701385131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bac07e72f6cafb4fb90857db517eb49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionSignTransform: {fileID: 6867485387618229253}
+  onSceneStartingDialog:
+  - The doors open and stepping onto the platform Budi is alone even before they
+    close again. There is no kid, just remnants of his cigarette in the air and a
+    subway station that doesn't look familiar. Dit is nich Berlin, is it?
+  firstContactDialog:
+  - The portly Conductor works the platform and seems to have ignored Budi completely
+    so far, seemingly wanting to ignore him some more but when at a second "Excuse
+    me?" he finally turns around.
+  - ' Asking about the U2 going to Alexanderplatz doesn''t work as well as Budi expected
+    and the man raises his raised brow even further and eyes Budi up and down.'
+  - '"Ticket please." Is the only thing you get in response as the man looks at Budi
+    with some reproach.'
+  - You don't really get what that has anything to do with your question and phone
+    in hand you tell the man. "I've got the Deutschlandticket."
+  - '"And I got rheuma since last night. With a ticket like that I don''t see you
+    getting anyplace any time soon."'
+  - The man turns away from Budi and leaves him staring at a broad back not knowing
+    what to say.
+  returningDialog:
+  - Budi approaches the man again who faces him with a face very near irritated.
+    "Listen here," the man starts before Budi can even say a word, " Whatever that
+    ticket is you have, it's not going to get you where you want to go. If you can't
+    get a ticket here, try it some place else."
+  - At Budi's blank stare the conductor sighs. "You can go anywhere you want but
+    arriving where you want to be, that's not free."
+  - With that the man turns around and ignores any further inquiry.
+  collectDialog:
+  - The Conductor sighs at Budi approaching again, preparing to rebuff him again
+    the man immediately closes his mouth again as Budi reveals the high quality Bubatz.
+    Farm to table. Maybe he's up for a trade...
+  - '"I see.", he says, nodding. "That seems fair. A fair trade." Nodding still,
+    the Conductor pulls out what looks like a jack-in-the-box from his pocket and
+    starts cranking it.'
+  - There is no music and nothing jumps out of the box but after a moment of cranking
+    quietly, the Conductor pulls a ticket from his breast pocket and hands it to
+    you for the Bubatz.
+  - Budi receives the Ticket. Looks like a recipe in an especially bad doctor's handwriting
+  - '"The only thing you need now is a train.", says the Conductor as he lights up
+    his Bubatz and walks away. Motherf-...'
+  interactionDistance: 10
+  itemToCollect: 2
+  itemToReceive: 3
+  _spriteWithoutItem: {fileID: 21300000, guid: a78576afded2b904e99e62f1ebe9e5c0, type: 3}
+  _spriteWithItem: {fileID: 0}

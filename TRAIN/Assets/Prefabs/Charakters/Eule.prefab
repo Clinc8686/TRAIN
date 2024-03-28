@@ -209,13 +209,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bac07e72f6cafb4fb90857db517eb49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   interactionSignTransform: {fileID: 7523185006942326973}
-  dialogTextInput: Saying the creature communicated in the same manner as the Pulsar
-    you "talked" to earlier, while kind of true, feels entirely wrong to say out
-    loud. Even more different than two genres still being music.  This creature had
-    so much class, all that sass, with legs like this imagine the-....
+  onSceneStartingDialog: []
+  firstContactDialog:
+  - Saying the creature communicated in the same manner as the Pulsar you "talked"
+    to earlier, while kind of true, feels entirely wrong to say out loud. Even more
+    different than two genres still being music.  This creature had so much class,
+    all that sass, with legs like this imagine the-....
+  returningDialog: []
+  collectDialog: []
   interactionDistance: 10
+  itemToCollect: 0
+  itemToReceive: 0
+  _spriteWithoutItem: {fileID: 0}
+  _spriteWithItem: {fileID: 0}
 --- !u!114 &3886439598563109963
 MonoBehaviour:
   m_ObjectHideFlags: 0

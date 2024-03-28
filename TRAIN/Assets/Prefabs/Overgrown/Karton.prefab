@@ -428,11 +428,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bac07e72f6cafb4fb90857db517eb49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   interactionSignTransform: {fileID: 3047458148451946513}
-  dialogTextInput: It's basically a compost heap in a cardboard box. Not the smartest
-    idea but y'know...
+  onSceneStartingDialog: []
+  firstContactDialog:
+  - t's basically a compost heap in a cardboard box. Not the smartest idea but y'know..
+  returningDialog: []
+  collectDialog: []
   interactionDistance: 10
+  itemToCollect: 0
+  itemToReceive: 0
+  _spriteWithoutItem: {fileID: 0}
+  _spriteWithItem: {fileID: 0}
 --- !u!1 &8286513146011871303
 GameObject:
   m_ObjectHideFlags: 0

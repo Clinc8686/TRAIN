@@ -314,6 +314,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 707943a15480580498e7e566fd5f5414, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerTargetIndicatorPrefab: {fileID: 6279975321900597992, guid: c5f90a69e32de5844a7b1a2143551a98, type: 3}
   playerTargetIndicator: {fileID: 0}
   speed: 20
   animator: {fileID: 4165501448534160742}

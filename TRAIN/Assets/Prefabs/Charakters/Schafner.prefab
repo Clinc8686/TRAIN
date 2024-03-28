@@ -451,7 +451,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1633770441766930781}
   - component: {fileID: 3511800157420516406}
-  - component: {fileID: 1883898212695258633}
   - component: {fileID: 3442112935239758276}
   m_Layer: 6
   m_Name: Schafner
@@ -522,47 +521,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 8.34, y: 15.12}
   m_EdgeRadius: 0
---- !u!114 &1883898212695258633
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5768337924701385131}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c8976ce9fd4e50418fbadd49ba55692, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  interactionSignTransform: {fileID: 6867485387618229253}
-  dialogTextInput: 
-  interactionDistance: 10
-  collectableSO: {fileID: 11400000, guid: de38cd7889fdbed458e98771395e5e83, type: 2}
-  text:
-  - The portly Conductor works the platform and seems to have ignored Budi completely
-    so far, seemingly wanting to ignore him some more but when at a second "Excuse
-    me?" he finally turns around.
-  - Asking about the U2 going to Alexanderplatz doesn't work as well as Budi expected
-    and the man raises his raised brow even further and eyes Budi up and down.
-  - '"Ticket please." Is the only thing you get in response as the man looks at Budi
-    with some reproach.'
-  - You don't really get what that has anything to do with your question and phone
-    in hand you tell the man. "I've got the Deutschlandticket."
-  - '"And I got rheuma since last night. With a ticket like that I don''t see you
-    getting anyplace any time soon."'
-  - The man turns away from Budi and leaves him staring at a broad back not knowing
-    what to say.
-  textAfterItem:
-  - 
-  - 
-  - 
-  - 
-  textwithBubatz:
-  - 
-  - 
-  - 
-  - 
 --- !u!114 &3442112935239758276
 MonoBehaviour:
   m_ObjectHideFlags: 0

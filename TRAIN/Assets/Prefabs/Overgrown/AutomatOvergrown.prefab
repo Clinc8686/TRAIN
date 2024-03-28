@@ -480,10 +480,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bac07e72f6cafb4fb90857db517eb49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   interactionSignTransform: {fileID: 4632598606495243707}
-  dialogTextInput: Der Automat ist defekt.
+  onSceneStartingDialog: []
+  firstContactDialog:
+  - 'The ticket machine is obviously broken, vines and leaves sprouting out of several
+    openings and cracks. Surprisingly it looks more like a, formerly, functioning
+    ticket machine than the one in the station you arrived in. '
+  - Looking the broken piece of machinery up and down, Budi notices an almost constant
+    trickle of kernels out of the opening where change might have landed in once.
+  - Budi receives a Pouch of Kernels. With no experience but the rolled up product
+    Budi has no idea if those are Bubatz seeds.
+  returningDialog: []
+  collectDialog: []
   interactionDistance: 10
+  itemToCollect: 0
+  itemToReceive: 5
+  _spriteWithoutItem: {fileID: 0}
+  _spriteWithItem: {fileID: 0}
 --- !u!1 &7726477959273380484
 GameObject:
   m_ObjectHideFlags: 0

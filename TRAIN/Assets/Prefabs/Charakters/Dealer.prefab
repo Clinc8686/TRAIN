@@ -254,11 +254,45 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bac07e72f6cafb4fb90857db517eb49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   interactionSignTransform: {fileID: 1867744557448395349}
-  interactionPointTransform: {fileID: 0}
-  dialogTextInput: Hello, willst du was kaufen?
+  onSceneStartingDialog: []
+  firstContactDialog:
+  - Budi stands in front of a... person. A person in a trenchcoat with the head of
+    a Pidgeon. Not only struggling with that, Budi seems to have trouble trying to
+    face the pidgeon who turns it's head now and then blank eyes staring ever so
+    slightly off to the side.
+  - Before he can adress his counterpart, trying not to let the silence drag on and
+    get even more awkward, the Pidgeon, with one eye on the conductor, slowly opens
+    the robe...
+  - ... revealing a set of different subway trains dangling from the inside of the
+    coat. "Bauble coo-coo-t your eye, stranger...?". Not what Budi expected but way
+    better than what he had expected.
+  - '"...what?" Budi''s eloquence amazes himself, tilting his head a little until
+    he gets the feeling the eye is looking at him.'
+  - '"If you have coo-coo-in, I have wares!", the Pidgeon says, jiggling the coat
+    to make the trains rattle against each other, the sound much heavier than they
+    actually look. They are just models, right?'
+  - A slight feeling that the last bit of change in Budi's pockets won't cut it,
+    Budi shrugs, trying to connect with the staring eye again. The eyes follow his
+    every movement as Budi checks his pockets.
+  - '"Don''t fret, don''t fret. Another time then.", the Pidgeon coo''s and despite
+    the blank stare of those wide eyes there seems to be some feeling of letdown
+    when Budi''s hands come out of his pockets empty.'
+  returningDialog:
+  - 'Like a wind-up toy the pidgeon is about to repeat the line but before it can
+    start cooing, Budi reveals the small Pouch of Kernels. The rustle silences the
+    pidgeon instantly and the eyes focus on Budi''s hands like they have never before
+    on him. '
+  - '"Coo-coo-coo!" The pidgeon seems unable to contain the excitement. "I''m willing
+    to trade, too... you know.", and a train is in it''s hands before you know it,
+    the eyes glued to the pouch in Budi''s hand.'
+  - Budi receives a subway-train. It's surprisingly heavy for its size.
+  collectDialog: []
   interactionDistance: 10
+  itemToCollect: 5
+  itemToReceive: 0
+  _spriteWithoutItem: {fileID: 0}
+  _spriteWithItem: {fileID: 0}
 --- !u!1 &7838124751323039243
 GameObject:
   m_ObjectHideFlags: 0

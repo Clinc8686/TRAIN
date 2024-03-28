@@ -214,11 +214,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bac07e72f6cafb4fb90857db517eb49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  interactionSignTransform: {fileID: 0}
-  interactionPointTransform: {fileID: 0}
-  dialogTextInput: 
+  interactionSignTransform: {fileID: 7774152902144716233}
+  onSceneStartingDialog: []
+  firstContactDialog:
+  - 'The machine gives you even more anxiety than standing at the edge of the platform. '
+  - There are several things, that could be dials or gems or stars themselves, arranged
+    in a circle around a wide, round opening into what looks like a new galaxy forming.
+    Nothing to mess with. Budi doesn't feel comfortable at the possibility of having
+    that kind of power.
+  returningDialog: []
+  collectDialog: []
   interactionDistance: 1
+  itemToCollect: 0
+  itemToReceive: 0
+  _spriteWithoutItem: {fileID: 0}
+  _spriteWithItem: {fileID: 0}
 --- !u!1 &5669341594119166592
 GameObject:
   m_ObjectHideFlags: 0

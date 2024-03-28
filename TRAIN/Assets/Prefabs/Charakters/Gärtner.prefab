@@ -547,13 +547,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bac07e72f6cafb4fb90857db517eb49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionSignTransform: {fileID: 0}
-  onSceneStartingDialog: []
-  dialogWithoutItem:
-  - The little Plant person barely stops working as Budi stands there watching, trying
-    to get its attention. A couple of times it puts down the comically large shovel
-    to genkidama some photosynthesis, which looks to be a struggling affair, before
-    it continues working.
+  interactionSignTransform: {fileID: 7482527656420151346}
+  onSceneStartingDialog:
+  - The doors open and Budi gets hit by the humidity of the air, the smell of turned
+    mulch and vegetation. Stepping onto the plattform looks like stepping into an
+    underground greenhouse. There are several seed beds, a scarecrow, bags and crates
+    full of crops.
+  firstContactDialog:
+  - 'The little Plant person barely stops working as Budi stands there watching,
+    trying to get its attention. A couple of times it puts down the comically large
+    shovel to genkidama some photosynthesis, which looks to be a struggling affair,
+    before it continues working. '
   - During such a loading phase Budi looks at the seed bed, wondering what the little
     creature is working on and instantly feels at home. The leaves, the smell, one
     deep breath and he feels the feels. This little Plant here is tending a fine
@@ -563,9 +567,9 @@ MonoBehaviour:
     anymore. Not since the rooflights have grown over for good." Budi feels the same
     sadness in the creatures voice but isn't entirely sure they are for the same
     reason exactly.
-  - ' "If things continue like this, with the light waning, soon there''ll only be
+  - '"If things continue like this, with the light waning, soon there''ll only be
     glowing mushrooms growing here... and who wants that?"'
-  dialogWitItem:
+  returningDialog:
   - 'The little Plant cheers as you drop your piece of the Sun, lighting up the entire
     place with a warm glow, watching all the plants facing their new Sun. '
   - '"How lovely! That should do the trick and help all my lovelies grow! I really,
@@ -577,5 +581,9 @@ MonoBehaviour:
   - The regret doesn't really feel believable but the Plant doesn't budge on the
     topic. A job well done really fells like a letdown if all you get for it is a
     bit of applause.
+  collectDialog: []
   interactionDistance: 10
   itemToCollect: 1
+  itemToReceive: 5
+  _spriteWithoutItem: {fileID: 0}
+  _spriteWithItem: {fileID: 0}

@@ -196,16 +196,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bac07e72f6cafb4fb90857db517eb49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   interactionSignTransform: {fileID: 7895171339397672575}
-  dialogTextInput: The ticket machine is completely busted. There is no single screen
-    intact, button not mashed in or piece of surface not scratched, scuffed or otherwise
-    defaced. Where has society come to that public property was treated that way...
-    where has it come to to have it left in this sorry state... what more must happen
-    tha-  Budi shakes his head violently. The edgy darkness had almost snuck inside,
-    turning his inner monologue into a snappy narration about societal dread and
-    moral ambiguity.
+  onSceneStartingDialog: []
+  firstContactDialog:
+  - The ticket machine is completely busted. There is no single screen intact, button
+    not mashed in or piece of surface not scratched, scuffed or otherwise defaced.
+    Where has society come to that public property was treated that way... where
+    has it come to to have it left in this sorry state... what more must happen tha-
+  - Budi shakes his head violently. The edgy darkness had almost snuck inside, turning
+    his inner monologue into a snappy narration about societal dread and moral ambiguity.
+  returningDialog: []
+  collectDialog: []
   interactionDistance: 10
+  itemToCollect: 0
+  itemToReceive: 0
+  _spriteWithoutItem: {fileID: 0}
+  _spriteWithItem: {fileID: 0}
 --- !u!1 &4207925108059065214
 GameObject:
   m_ObjectHideFlags: 0

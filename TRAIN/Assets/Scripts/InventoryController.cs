@@ -11,6 +11,7 @@ public class InventoryController : MonoBehaviour
     [SerializeField] private Image[] inventoryContentSlots;
     [SerializeField] private CollectableItem[] collectableItems;
     [SerializeField] private Sprite[] collectableSprites;
+    //CollectableSO from ScriptableObjects
     
     private int _index = 0;
     private int _collectableCounter = 0;

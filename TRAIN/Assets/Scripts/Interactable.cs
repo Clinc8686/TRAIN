@@ -23,6 +23,7 @@ public class Interactable : MonoBehaviour, IInteractable
     [SerializeField] private Sprite _spriteWithoutItem;
     [Tooltip("Character look with the required item")] 
     [SerializeField] private Sprite _spriteWithItem;
+    
 
     private Player _player;
     private InventoryController _inventoryController;
@@ -30,7 +31,6 @@ public class Interactable : MonoBehaviour, IInteractable
 
     private void Awake()
     {
-        _player = Player.Instance;
         _inventoryController = InventoryController.Instance;
         _spriteRenderer = GetComponentInChild<SpriteRenderer>();
         PlayerPrefs.SetInt("Conductor", 0);
@@ -38,6 +38,9 @@ public class Interactable : MonoBehaviour, IInteractable
 
     private void Start()
     {
+        _player = Player.Instance;
+        
+        //Start displaying dialog
         if (onSceneStartingDialog != null)
         {
             DialogController.Instance.WriteText(onSceneStartingDialog, _player);
@@ -47,12 +50,18 @@ public class Interactable : MonoBehaviour, IInteractable
         {
             Debug.LogWarning("No item to collect has been set for " + gameObject.name);
         }
-
+        
+        //Setup default sprite
+        if (_spriteWithoutItem == null)
+        {
+            _spriteWithoutItem = _spriteRenderer.sprite;
+        }
         CheckSprite();
     }
-
+    
     private void Update()
     {
+        //Checks if the player is in range for interaction
         float distanceToPlayer = Vector2.Distance(transform.position, _player.transform.position);
         if(distanceToPlayer <= interactionDistance)
         {
@@ -112,8 +121,16 @@ public class Interactable : MonoBehaviour, IInteractable
                 }
                 else
                 {
-                    //Displays dialog if the player does not have the required item
-                    WriteDialog(returningDialog);
+                    if (returningDialog == null)
+                    {
+                        //Displays first dialog if no returning dialog is set
+                        WriteDialog(firstContactDialog);
+                    }
+                    else
+                    {
+                        //Displays dialog if the player does not have the required item
+                        WriteDialog(returningDialog);
+                    }
                 }
             }
             else
@@ -124,6 +141,7 @@ public class Interactable : MonoBehaviour, IInteractable
         }
     }
 
+    //Writes dialog to the dialog box
     private void WriteDialog(String[] text)
     {
         if (DialogController.Instance.IsWriting()) return;
@@ -134,7 +152,7 @@ public class Interactable : MonoBehaviour, IInteractable
     //Method changes the sprite depending on whether the player has the required item
     private void CheckSprite()
     {
-        if (_inventoryController.PlayerHasItem(itemToCollect))
+        if (itemToCollect != InventoryController.CollectableItem.Default && _inventoryController.PlayerHasItem(itemToCollect))
         {
             if (_spriteWithItem != null)
             {

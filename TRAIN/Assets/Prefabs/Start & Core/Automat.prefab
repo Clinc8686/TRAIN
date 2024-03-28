@@ -419,13 +419,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bac07e72f6cafb4fb90857db517eb49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   interactionSignTransform: {fileID: 4542432209929134989}
-  dialogTextInput: There are several different dials and buttons, a literal lever
-    and something that almost looks like a face. There are several openings, too.
-    Some resemble what you are used to from a ticket machine but others look like
-    a pizza-oven.
+  onSceneStartingDialog: []
+  firstContactDialog:
+  - There are several different dials and buttons, a literal lever and something
+    that almost looks like a face. There are several openings, too. Some resemble
+    what you are used to from a ticket machine but others look like a pizza-oven
+  returningDialog: []
+  collectDialog: []
   interactionDistance: 10
+  itemToCollect: 0
+  itemToReceive: 0
+  _spriteWithoutItem: {fileID: 0}
+  _spriteWithItem: {fileID: 0}
 --- !u!1 &8640224539112826020
 GameObject:
   m_ObjectHideFlags: 0

@@ -14,7 +14,8 @@ public class Player : MonoBehaviour
     private const string PLAYER_MOVE_BOTTOM_LEFT = "TopLeft";
     private const string PLAYER_MOVE_TOP_RIGHT = "BackRight";
 
-    [SerializeField] private Transform playerTargetIndicator;
+    [SerializeField] private GameObject playerTargetIndicatorPrefab;
+    private Transform playerTargetIndicator;
     [SerializeField] private float speed = 10f;
     [SerializeField] private Animator animator;
     [SerializeField] private LayerMask interactableLayerMask;
@@ -29,12 +30,17 @@ public class Player : MonoBehaviour
     public static Player Instance { get; private set; }
     private void Awake()
     {
+        //Singleton
         if (Instance != null)
         {
             Destroy(gameObject);
             return;
         }
         Instance = this;
+
+        //Instantiate player target indicator
+        playerTargetIndicatorPrefab = Instantiate(playerTargetIndicatorPrefab);
+        playerTargetIndicator = playerTargetIndicatorPrefab.transform;
         
         _spriteRenderer = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
@@ -42,6 +48,7 @@ public class Player : MonoBehaviour
         newPosition = transform.position;
         playerTargetIndicator.gameObject.SetActive(false);
         
+        //Layer mask without player and train
         int playerLayer = LayerMask.NameToLayer("Player");
         int trainLayer = LayerMask.NameToLayer("Train");
         layerMaskWithoutPlayerTrain = ~(1 << playerLayer | 1 << trainLayer); //Exclude player and train layer

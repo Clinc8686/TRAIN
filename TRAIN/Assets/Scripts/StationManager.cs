@@ -85,16 +85,22 @@ public class StationManager : MonoBehaviour
     {
         foreach (GameObject train in trains)
         {
-            train.SetActive(false);
             train.TryGetComponent(out Animator animator);
-            animator.Update(0f);
+            if (train.gameObject.activeInHierarchy)
+            {
+                animator.Update(0f);
+            }
+            train.SetActive(false);
         }
 
         if (LastTrain != null)
         {
-            LastTrain.SetActive(false);
             LastTrain.TryGetComponent(out Animator lastTrainAnimator);
-            lastTrainAnimator.Update(0f);
+            if (lastTrainAnimator.gameObject.activeInHierarchy)
+            {
+                lastTrainAnimator.Update(0f);
+            }
+            LastTrain.SetActive(false);
         }
     }
 }

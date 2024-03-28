@@ -463,15 +463,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bac07e72f6cafb4fb90857db517eb49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   interactionSignTransform: {fileID: 4241099961812636671}
-  dialogTextInput: Budi has never felt so naked and sized up just by being looked
-    over in one solid gaze. The Dame in front of him is tall, even without the heels,
-    classy and gorgeous in a dress easily more expensive than Budi's last three apartments,
-    and the slight disdain with which she looks at him has its own kind of appeal. 
-    Budi doesn't know how to talk to a woman like that, even in a weird parallel
+  onSceneStartingDialog: []
+  firstContactDialog:
+  - Budi has never felt so naked and sized up just by being looked over in one solid
+    gaze. The Dame in front of him is tall, even without the heels, classy and gorgeous
+    in a dress easily more expensive than Budi's last three apartments, and the slight
+    disdain with which she looks at him has its own kind of appeal.
+  - Budi doesn't know how to talk to a woman like that, even in a weird parallel
     world.
+  returningDialog: []
+  collectDialog: []
   interactionDistance: 10
+  itemToCollect: 0
+  itemToReceive: 0
+  _spriteWithoutItem: {fileID: 0}
+  _spriteWithItem: {fileID: 0}
 --- !u!1 &6717219297548131236
 GameObject:
   m_ObjectHideFlags: 0

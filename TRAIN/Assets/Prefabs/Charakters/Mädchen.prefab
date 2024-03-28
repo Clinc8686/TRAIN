@@ -399,10 +399,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bac07e72f6cafb4fb90857db517eb49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  interactionSignTransform: {fileID: 0}
-  dialogTextInput: 
+  interactionSignTransform: {fileID: 9198073746371064191}
+  onSceneStartingDialog: []
+  firstContactDialog: []
+  returningDialog: []
+  collectDialog: []
   interactionDistance: 1
+  itemToCollect: 0
+  itemToReceive: 0
+  _spriteWithoutItem: {fileID: 0}
+  _spriteWithItem: {fileID: 0}
 --- !u!1 &7929481070377910975
 GameObject:
   m_ObjectHideFlags: 0
